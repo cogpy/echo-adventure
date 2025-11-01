@@ -23,9 +23,16 @@ Novel trainable parameters that control generation behavior:
 - **`layer_weights`**: Determines which transformer layers to emphasize (learned)
 - **`head_weights`**: Determines which attention heads to use (learned)
 
-## Key Innovation
+## Key Innovations
 
-Unlike traditional language models where inference parameters (temperature, top_p, etc.) are fixed hyperparameters chosen manually, this architecture learns these parameters during training to optimize for specific generation objectives.
+This project introduces several key innovations:
+
+1.  **Two-Layer Architecture**: Unlike traditional language models where inference parameters (temperature, top_p, etc.) are fixed hyperparameters chosen manually, this architecture learns these parameters during training to optimize for specific generation objectives.
+
+2.  **EchoSelf Introspection (v0.2.0)**: A third layer that enables self-awareness and introspection through:
+    *   **Hypergraph Identity**: A flexible, extensible representation of the model's self-understanding.
+    *   **Agent-Arena-Relation (AAR) Geometry**: A geometric framework for modeling the emergent self.
+    *   **Conversation-to-Hypergraph Transformation**: A mechanism for learning and refining identity from conversational data.
 
 ## Installation
 
