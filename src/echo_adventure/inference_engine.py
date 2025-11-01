@@ -13,6 +13,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+# Constants
+MIN_SIGMOID_VALUE = 0.001  # Minimum value for inverse sigmoid to prevent numerical issues
+MAX_SIGMOID_VALUE = 0.999  # Maximum value for inverse sigmoid to prevent numerical issues
+MIN_WEIGHT_EPSILON = 1e-9  # Small epsilon for numerical stability in normalization
+
 
 class InferenceEngine(nn.Module):
     """
@@ -83,7 +88,7 @@ class InferenceEngine(nn.Module):
     @staticmethod
     def _inverse_sigmoid(x: float) -> float:
         """Inverse of sigmoid for initialization."""
-        x = max(0.001, min(0.999, x))  # Clip to valid range
+        x = max(MIN_SIGMOID_VALUE, min(MAX_SIGMOID_VALUE, x))  # Clip to valid range
         return torch.log(torch.tensor(x) / (1.0 - x)).item()
     
     @property
@@ -182,7 +187,7 @@ class InferenceEngine(nn.Module):
             weighted_attn = attn * head_w
             
             # Renormalize across heads
-            weighted_attn = weighted_attn / weighted_attn.sum(dim=1, keepdim=True).clamp(min=1e-9)
+            weighted_attn = weighted_attn / weighted_attn.sum(dim=1, keepdim=True).clamp(min=MIN_WEIGHT_EPSILON)
             
             reweighted.append(weighted_attn)
         

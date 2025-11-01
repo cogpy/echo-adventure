@@ -13,6 +13,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 
+# Constants
+MASK_VALUE = -1e9  # Value to use for masking in attention
+
 
 class MultiHeadAttention(nn.Module):
     """Multi-head attention mechanism with Q, K, V matrices."""
@@ -67,7 +70,7 @@ class MultiHeadAttention(nn.Module):
         scores = torch.matmul(Q, K.transpose(-2, -1)) / math.sqrt(self.head_dim)
         
         if mask is not None:
-            scores = scores.masked_fill(mask == 0, -1e9)
+            scores = scores.masked_fill(mask == 0, MASK_VALUE)
         
         attention_weights = F.softmax(scores, dim=-1)
         attention_weights = self.dropout(attention_weights)
