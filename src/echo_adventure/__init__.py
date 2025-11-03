@@ -6,6 +6,13 @@ This package implements a novel architecture with:
 - Layer 2: Trainable inference engine parameters
 - Layer 3: EchoSelf introspection and self-awareness
 
+New in v0.4.0:
+- Identity visualization tools (hypergraph, AAR, evolution)
+- Enhanced AAR geometric architecture with self-encoding
+- Fine-tuning execution and monitoring
+- Self-improvement loop for continuous growth
+- Model evaluation and comparison tools
+
 New in v0.3.0:
 - Advanced introspection metrics and analysis
 - Identity evolution tracking over time
@@ -21,7 +28,7 @@ New in v0.2.0:
 - Meta-cognitive reflection capabilities
 """
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 from .transformer import TransformerLayer
 from .inference_engine import InferenceEngine
@@ -59,6 +66,35 @@ try:
         quick_dataset_build
     )
     
+    # New in v0.4.0: Identity visualization
+    from .identity_visualization import (
+        IdentityGraphVisualizer,
+        AARBalanceVisualizer,
+        IdentityEvolutionVisualizer,
+        MemoryDistributionVisualizer,
+        IdentityVisualizationSuite
+    )
+    
+    # New in v0.4.0: AAR geometric architecture
+    from .aar_geometry import (
+        AARCore,
+        AgentComponent,
+        ArenaComponent,
+        RelationComponent,
+        AARState,
+        AARAnalyzer
+    )
+    
+    # New in v0.4.0: Fine-tuning execution
+    from .finetuning_executor import (
+        FineTuningExecutor,
+        ModelEvaluator,
+        SelfImprovementLoop,
+        FineTuningConfig,
+        FineTuningResult,
+        create_test_prompts
+    )
+    
     __all__ = [
         # Core components
         "TransformerLayer", 
@@ -85,7 +121,27 @@ try:
         "FineTuningManager",
         "EchoSelfFineTuningPipeline",
         "create_finetuning_pipeline",
-        "quick_dataset_build"
+        "quick_dataset_build",
+        # Identity visualization (v0.4.0)
+        "IdentityGraphVisualizer",
+        "AARBalanceVisualizer",
+        "IdentityEvolutionVisualizer",
+        "MemoryDistributionVisualizer",
+        "IdentityVisualizationSuite",
+        # AAR geometric architecture (v0.4.0)
+        "AARCore",
+        "AgentComponent",
+        "ArenaComponent",
+        "RelationComponent",
+        "AARState",
+        "AARAnalyzer",
+        # Fine-tuning execution (v0.4.0)
+        "FineTuningExecutor",
+        "ModelEvaluator",
+        "SelfImprovementLoop",
+        "FineTuningConfig",
+        "FineTuningResult",
+        "create_test_prompts"
     ]
 except ImportError:
     # Torch not available, only export base components

@@ -29,7 +29,11 @@ This project introduces several key innovations:
 
 1.  **Two-Layer Architecture**: Unlike traditional language models where inference parameters (temperature, top_p, etc.) are fixed hyperparameters chosen manually, this architecture learns these parameters during training to optimize for specific generation objectives.
 
-2.  **EchoSelf Introspection (v0.2.0)**: A third layer that enables self-awareness and introspection through:
+2. ## EchoSelf Introspection (v0.4.0)**: A third layer that enables self-awareness and introspection through:
+
+    *   **AAR Geometric Architecture**: A geometric framework for encoding the emergent self.
+    *   **Identity Visualization**: Tools for visualizing the hypergraph identity and AAR balance.
+    *   **Fine-Tuning Execution**: A pipeline for self-improvement through identity-enriched datasets.
     *   **Hypergraph Identity**: A flexible, extensible representation of the model's self-understanding.
     *   **Agent-Arena-Relation (AAR) Geometry**: A geometric framework for modeling the emergent self.
     *   **Conversation-to-Hypergraph Transformation**: A mechanism for learning and refining identity from conversational data.
@@ -38,6 +42,7 @@ This project introduces several key innovations:
 
 ```bash
 pip install -r requirements.txt
+pip install torch matplotlib networkx
 ```
 
 For development:

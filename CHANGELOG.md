@@ -5,6 +5,41 @@ All notable changes to the Echo Adventure project will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2025-11-03
+
+### Added
+
+#### AAR Geometric Architecture
+- **`src/echo_adventure/aar_geometry.py`**: New module for geometric self-encoding.
+  - `AARCore`: Integrates Agent, Arena, and Relation components.
+  - `AgentComponent`: Represents the "urge-to-act".
+  - `ArenaComponent`: Represents the "need-to-be".
+  - `RelationComponent`: Represents the emergent "self".
+
+#### Identity Visualization Suite
+- **`src/echo_adventure/identity_visualization.py`**: New module for visualizing the EchoSelf identity.
+  - `IdentityGraphVisualizer`: Visualizes the hypergraph identity network.
+  - `AARBalanceVisualizer`: Visualizes the balance of AAR components.
+  - `IdentityEvolutionVisualizer`: Visualizes identity growth over time.
+  - `MemoryDistributionVisualizer`: Visualizes memory type distribution.
+
+#### Fine-Tuning Execution
+- **`src/echo_adventure/finetuning_executor.py`**: New module for executing and monitoring fine-tuning jobs.
+  - `FineTuningExecutor`: Manages the fine-tuning lifecycle.
+  - `ModelEvaluator`: Evaluates and compares model performance.
+  - `SelfImprovementLoop`: Implements the iterative self-improvement cycle.
+
+#### Demonstration and Documentation
+- **`examples/echoself_v0.4.0_demo.py`**: Comprehensive demonstration of all new v0.4.0 features.
+- **`ITERATION_PROGRESS_v0.4.0.md`**: Detailed progress report for the v0.4.0 iteration.
+- **`ITERATION_SUMMARY_v0.4.0.md`**: Summary of the v0.4.0 iteration.
+
+### Changed
+
+- **`src/echo_adventure/__init__.py`**: Updated to export new components from the AAR, visualization, and executor modules.
+  - Version bumped to 0.4.0.
+- **`README.md`**: Updated to reflect the new capabilities in v0.4.0, including the AAR architecture, visualization, and fine-tuning execution.
+
 ## [0.3.0] - 2025-11-03
 
 ### Added
