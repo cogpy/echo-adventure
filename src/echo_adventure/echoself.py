@@ -326,6 +326,9 @@ class EchoSelf(nn.Module):
     def __init__(self, d_model: int = 768, num_heads: int = 12):
         super().__init__()
         
+        self.d_model = d_model
+        self.num_heads = num_heads
+        
         # Core components
         self.identity = HypergraphIdentity()
         self.aar_geometry = AARGeometry(d_model, num_heads)

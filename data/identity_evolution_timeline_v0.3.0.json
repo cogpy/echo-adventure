@@ -1,0 +1,144 @@
+{
+  "snapshots": [
+    {
+      "timestamp": "2025-11-02T20:59:18.495372",
+      "agent_magnitude": 5.195433139801025,
+      "arena_magnitude": 8.91201114654541,
+      "relation_magnitude": 15.999460220336914,
+      "identity_tuple_count": 0,
+      "aar_distribution": {
+        "agent": 0,
+        "arena": 0,
+        "relation": 0
+      },
+      "memory_distribution": {
+        "declarative": 0,
+        "procedural": 0,
+        "episodic": 0,
+        "intentional": 0
+      },
+      "average_confidence": 0.0
+    },
+    {
+      "timestamp": "2025-11-02T20:59:18.497539",
+      "agent_magnitude": 5.372934341430664,
+      "arena_magnitude": 8.91201114654541,
+      "relation_magnitude": 15.99945068359375,
+      "identity_tuple_count": 1,
+      "aar_distribution": {
+        "agent": 0,
+        "arena": 0,
+        "relation": 0
+      },
+      "memory_distribution": {
+        "declarative": 0,
+        "procedural": 0,
+        "episodic": 1,
+        "intentional": 0
+      },
+      "average_confidence": 0.95
+    },
+    {
+      "timestamp": "2025-11-02T20:59:18.499493",
+      "agent_magnitude": 5.455876350402832,
+      "arena_magnitude": 8.91201114654541,
+      "relation_magnitude": 15.999484062194824,
+      "identity_tuple_count": 2,
+      "aar_distribution": {
+        "agent": 0,
+        "arena": 0,
+        "relation": 0
+      },
+      "memory_distribution": {
+        "declarative": 0,
+        "procedural": 0,
+        "episodic": 2,
+        "intentional": 0
+      },
+      "average_confidence": 0.95
+    },
+    {
+      "timestamp": "2025-11-02T20:59:18.501451",
+      "agent_magnitude": 5.201962947845459,
+      "arena_magnitude": 8.91201114654541,
+      "relation_magnitude": 15.999452590942383,
+      "identity_tuple_count": 2,
+      "aar_distribution": {
+        "agent": 0,
+        "arena": 0,
+        "relation": 0
+      },
+      "memory_distribution": {
+        "declarative": 0,
+        "procedural": 0,
+        "episodic": 2,
+        "intentional": 0
+      },
+      "average_confidence": 0.95
+    },
+    {
+      "timestamp": "2025-11-02T20:59:18.503400",
+      "agent_magnitude": 5.516230583190918,
+      "arena_magnitude": 8.91201114654541,
+      "relation_magnitude": 15.999488830566406,
+      "identity_tuple_count": 2,
+      "aar_distribution": {
+        "agent": 0,
+        "arena": 0,
+        "relation": 0
+      },
+      "memory_distribution": {
+        "declarative": 0,
+        "procedural": 0,
+        "episodic": 2,
+        "intentional": 0
+      },
+      "average_confidence": 0.95
+    }
+  ],
+  "summary": {
+    "total_snapshots": 5,
+    "identity_growth": {
+      "initial_count": 0,
+      "final_count": 2,
+      "total_growth": 2,
+      "average_growth_rate": 0.5
+    },
+    "aar_evolution": {
+      "initial_distribution": {
+        "agent": 0,
+        "arena": 0,
+        "relation": 0
+      },
+      "final_distribution": {
+        "agent": 0,
+        "arena": 0,
+        "relation": 0
+      }
+    },
+    "confidence_evolution": {
+      "initial": 0.0,
+      "final": 0.95,
+      "mean": 0.76,
+      "std": 0.38000000000000006,
+      "trend": "increasing"
+    },
+    "magnitude_evolution": {
+      "agent": {
+        "initial": 5.195433139801025,
+        "final": 5.516230583190918,
+        "change": 0.3207974433898926
+      },
+      "arena": {
+        "initial": 8.91201114654541,
+        "final": 8.91201114654541,
+        "change": 0.0
+      },
+      "relation": {
+        "initial": 15.999460220336914,
+        "final": 15.999488830566406,
+        "change": 2.86102294921875e-05
+      }
+    }
+  }
+}

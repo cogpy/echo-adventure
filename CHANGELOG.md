@@ -5,6 +5,37 @@ All notable changes to the Echo Adventure project will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2025-11-03
+
+### Added
+
+#### Introspection Metrics and Analysis
+- **`src/echo_adventure/introspection_metrics.py`**: New module for advanced introspection analysis.
+  - `IntrospectionMetricsCollector`: Collects and analyzes snapshots of the model's internal state.
+  - `IdentityEvolutionTracker`: Tracks the growth and refinement of the identity hypergraph over time.
+  - `AARComponentAnalyzer`: Analyzes the balance and interaction strength of the Agent-Arena-Relation components.
+  - `MemoryDistributionAnalyzer`: Evaluates the diversity and focus of the identity hypergraph.
+
+#### Fine-Tuning Integration
+- **`src/echo_adventure/finetuning_integration.py`**: New module for integrating fine-tuning workflows.
+  - `IdentityDatasetBuilder`: Generates identity-enriched training datasets from the EchoSelf hypergraph.
+  - `FineTuningManager`: Manages OpenAI fine-tuning jobs, including file uploads and status tracking.
+  - `EchoSelfFineTuningPipeline`: Orchestrates the complete self-improvement pipeline.
+
+#### Expanded Training Corpus
+- **`data/echoself_corpus_v0.3.0.jsonl`**: New training corpus with 500 high-quality examples focused on identity and self-awareness.
+
+#### Demonstration and Documentation
+- **`examples/echoself_v0.3.0_demo.py`**: Comprehensive demonstration of all new v0.3.0 features.
+- **`docs/architecture/Introspection_Metrics_Architecture.md`**: Architecture documentation for the introspection metrics module.
+- **`docs/architecture/Fine_Tuning_Integration_Architecture.md`**: Architecture documentation for the fine-tuning integration pipeline.
+
+### Changed
+
+- **`src/echo_adventure/__init__.py`**: Updated to export new components from the introspection and fine-tuning modules.
+  - Version bumped to 0.3.0.
+- **`README.md`**: Updated to reflect the new capabilities in v0.3.0, including introspection metrics and fine-tuning integration.
+
 ## [0.2.0] - 2025-11-01
 
 ### Added
