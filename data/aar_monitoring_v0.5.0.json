@@ -1,0 +1,471 @@
+{
+  "version": "v0.5.0",
+  "monitor_config": {
+    "history_size": 100,
+    "balance_threshold": 0.3,
+    "coherence_threshold": 0.5
+  },
+  "statistics": {
+    "total_steps": 20,
+    "total_alerts": 20,
+    "avg_balance": 0.9150787050551668,
+    "avg_coherence": -0.007564303930848837,
+    "max_imbalance": 0.09013219958270113,
+    "min_coherence": -0.05953509733080864
+  },
+  "trajectory": [
+    {
+      "timestamp": "2025-11-09T20:58:00.687476",
+      "step": 0,
+      "agent_magnitude": 5.286046028137207,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999481201171875,
+      "balance_score": 0.9110910220533277,
+      "interaction_strength": -0.05141092836856842,
+      "coherence": -0.011835174635052681,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.689803",
+      "step": 1,
+      "agent_magnitude": 5.500757694244385,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999506950378418,
+      "balance_score": 0.9157447548241965,
+      "interaction_strength": -0.02575354464352131,
+      "coherence": 0.007280665449798107,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.691540",
+      "step": 2,
+      "agent_magnitude": 5.481252670288086,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999493598937988,
+      "balance_score": 0.9153335058221075,
+      "interaction_strength": -0.07322348654270172,
+      "coherence": -0.03727589547634125,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.693303",
+      "step": 3,
+      "agent_magnitude": 5.3728790283203125,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999483108520508,
+      "balance_score": 0.913006639436673,
+      "interaction_strength": -0.02074531838297844,
+      "coherence": -0.0016014119610190392,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.694952",
+      "step": 4,
+      "agent_magnitude": 5.610284805297852,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999506950378418,
+      "balance_score": 0.9180140029457498,
+      "interaction_strength": 0.0019216854125261307,
+      "coherence": 0.01004512794315815,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.696514",
+      "step": 5,
+      "agent_magnitude": 5.42488956451416,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.99949836730957,
+      "balance_score": 0.9141319859803841,
+      "interaction_strength": -0.03066501021385193,
+      "coherence": 0.008694866672158241,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.698206",
+      "step": 6,
+      "agent_magnitude": 5.480904579162598,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.99951171875,
+      "balance_score": 0.9153259101941006,
+      "interaction_strength": -0.022361617535352707,
+      "coherence": 0.01589604839682579,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.700125",
+      "step": 7,
+      "agent_magnitude": 5.419100761413574,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999499320983887,
+      "balance_score": 0.9140075261900422,
+      "interaction_strength": -0.06112764775753021,
+      "coherence": -0.012008188292384148,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.701853",
+      "step": 8,
+      "agent_magnitude": 5.541516304016113,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.99951171875,
+      "balance_score": 0.9165973098134875,
+      "interaction_strength": -0.06427361816167831,
+      "coherence": -0.015247294679284096,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.703382",
+      "step": 9,
+      "agent_magnitude": 5.42147970199585,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999496459960938,
+      "balance_score": 0.9140587424246032,
+      "interaction_strength": -0.010831049643456936,
+      "coherence": 0.009155086241662502,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.704845",
+      "step": 10,
+      "agent_magnitude": 5.785801887512207,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999537467956543,
+      "balance_score": 0.9215083173558478,
+      "interaction_strength": -0.03338189795613289,
+      "coherence": 0.012395326048135757,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.706609",
+      "step": 11,
+      "agent_magnitude": 5.557585716247559,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999521255493164,
+      "balance_score": 0.9169306493740198,
+      "interaction_strength": -0.023741524666547775,
+      "coherence": 0.017092183232307434,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.708264",
+      "step": 12,
+      "agent_magnitude": 5.410021781921387,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999484062194824,
+      "balance_score": 0.9138121015323213,
+      "interaction_strength": -0.07996540516614914,
+      "coherence": -0.03505542874336243,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.709913",
+      "step": 13,
+      "agent_magnitude": 5.464694023132324,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.99950885772705,
+      "balance_score": 0.9149823707902447,
+      "interaction_strength": -0.14612272381782532,
+      "coherence": -0.05953509733080864,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.711675",
+      "step": 14,
+      "agent_magnitude": 5.631817817687988,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999521255493164,
+      "balance_score": 0.9184518366458629,
+      "interaction_strength": -0.10078182071447372,
+      "coherence": -0.02477605640888214,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.713324",
+      "step": 15,
+      "agent_magnitude": 5.668017864227295,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999524116516113,
+      "balance_score": 0.9191822105332141,
+      "interaction_strength": -0.06447432935237885,
+      "coherence": -0.00021497253328561783,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.715024",
+      "step": 16,
+      "agent_magnitude": 5.421568393707275,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999488830566406,
+      "balance_score": 0.9140608040950622,
+      "interaction_strength": -0.0545397624373436,
+      "coherence": -0.023173410445451736,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.716650",
+      "step": 17,
+      "agent_magnitude": 5.231678009033203,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999476432800293,
+      "balance_score": 0.9098678004172989,
+      "interaction_strength": -0.10746173560619354,
+      "coherence": -0.03189569711685181,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.718458",
+      "step": 18,
+      "agent_magnitude": 5.443379878997803,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999491691589355,
+      "balance_score": 0.9145283692533739,
+      "interaction_strength": 0.007671068422496319,
+      "coherence": 0.02490382455289364,
+      "attention_entropy": 0.6931471824645996
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.720127",
+      "step": 19,
+      "agent_magnitude": 5.279216766357422,
+      "arena_magnitude": 8.800570487976074,
+      "relation_magnitude": 15.999491691589355,
+      "balance_score": 0.9109382414214171,
+      "interaction_strength": -0.05235512554645538,
+      "coherence": -0.0041305795311927795,
+      "attention_entropy": 0.6931471824645996
+    }
+  ],
+  "alerts": [
+    {
+      "timestamp": "2025-11-09T20:58:00.687476",
+      "step": 0,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.012)",
+      "metrics": {
+        "coherence": -0.011835174635052681,
+        "interaction_strength": -0.05141092836856842
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.689803",
+      "step": 1,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: 0.007)",
+      "metrics": {
+        "coherence": 0.007280665449798107,
+        "interaction_strength": -0.02575354464352131
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.691540",
+      "step": 2,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.037)",
+      "metrics": {
+        "coherence": -0.03727589547634125,
+        "interaction_strength": -0.07322348654270172
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.693303",
+      "step": 3,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.002)",
+      "metrics": {
+        "coherence": -0.0016014119610190392,
+        "interaction_strength": -0.02074531838297844
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.694952",
+      "step": 4,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: 0.010)",
+      "metrics": {
+        "coherence": 0.01004512794315815,
+        "interaction_strength": 0.0019216854125261307
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.696514",
+      "step": 5,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: 0.009)",
+      "metrics": {
+        "coherence": 0.008694866672158241,
+        "interaction_strength": -0.03066501021385193
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.698206",
+      "step": 6,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: 0.016)",
+      "metrics": {
+        "coherence": 0.01589604839682579,
+        "interaction_strength": -0.022361617535352707
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.700125",
+      "step": 7,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.012)",
+      "metrics": {
+        "coherence": -0.012008188292384148,
+        "interaction_strength": -0.06112764775753021
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.701853",
+      "step": 8,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.015)",
+      "metrics": {
+        "coherence": -0.015247294679284096,
+        "interaction_strength": -0.06427361816167831
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.703382",
+      "step": 9,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: 0.009)",
+      "metrics": {
+        "coherence": 0.009155086241662502,
+        "interaction_strength": -0.010831049643456936
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.704845",
+      "step": 10,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: 0.012)",
+      "metrics": {
+        "coherence": 0.012395326048135757,
+        "interaction_strength": -0.03338189795613289
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.706609",
+      "step": 11,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: 0.017)",
+      "metrics": {
+        "coherence": 0.017092183232307434,
+        "interaction_strength": -0.023741524666547775
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.708264",
+      "step": 12,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.035)",
+      "metrics": {
+        "coherence": -0.03505542874336243,
+        "interaction_strength": -0.07996540516614914
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.709913",
+      "step": 13,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.060)",
+      "metrics": {
+        "coherence": -0.05953509733080864,
+        "interaction_strength": -0.14612272381782532
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.711675",
+      "step": 14,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.025)",
+      "metrics": {
+        "coherence": -0.02477605640888214,
+        "interaction_strength": -0.10078182071447372
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.713324",
+      "step": 15,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.000)",
+      "metrics": {
+        "coherence": -0.00021497253328561783,
+        "interaction_strength": -0.06447432935237885
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.715024",
+      "step": 16,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.023)",
+      "metrics": {
+        "coherence": -0.023173410445451736,
+        "interaction_strength": -0.0545397624373436
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.716650",
+      "step": 17,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.032)",
+      "metrics": {
+        "coherence": -0.03189569711685181,
+        "interaction_strength": -0.10746173560619354
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.718458",
+      "step": 18,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: 0.025)",
+      "metrics": {
+        "coherence": 0.02490382455289364,
+        "interaction_strength": 0.007671068422496319
+      }
+    },
+    {
+      "timestamp": "2025-11-09T20:58:00.720127",
+      "step": 19,
+      "alert_type": "low_coherence",
+      "severity": "high",
+      "message": "Relation coherence is low (score: -0.004)",
+      "metrics": {
+        "coherence": -0.0041305795311927795,
+        "interaction_strength": -0.05235512554645538
+      }
+    }
+  ],
+  "stability_analysis": {
+    "status": "stable",
+    "balance_variance": 7.750339786289815e-06,
+    "coherence_variance": 0.00046775229218306457,
+    "balance_trend": -2.6365558853179214e-05,
+    "coherence_trend": -0.0005344713947042486,
+    "mean_balance": 0.9150787050551668,
+    "mean_coherence": -0.007564303930848837,
+    "recommendation": "AAR state is stable. Continue current operation."
+  },
+  "export_timestamp": "2025-11-09T20:58:00.738310"
+}

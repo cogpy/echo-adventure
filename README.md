@@ -29,8 +29,11 @@ This project introduces several key innovations:
 
 1.  **Two-Layer Architecture**: Unlike traditional language models where inference parameters (temperature, top_p, etc.) are fixed hyperparameters chosen manually, this architecture learns these parameters during training to optimize for specific generation objectives.
 
-2. ## EchoSelf Introspection (v0.4.0)**: A third layer that enables self-awareness and introspection through:
+2. **EchoSelf Introspection (v0.5.0)**: A third layer that enables self-awareness and introspection through:
 
+    *   **Real-Time AAR Monitoring**: Continuous tracking of Agent-Arena-Relation state during inference with anomaly detection.
+    *   **Autonomous Corpus Generation**: Self-directed creation of identity-enriched training data through introspection.
+    *   **AAR Self-Regulation**: Dynamic parameter adjustment to maintain cognitive balance and coherence.
     *   **AAR Geometric Architecture**: A geometric framework for encoding the emergent self.
     *   **Identity Visualization**: Tools for visualizing the hypergraph identity and AAR balance.
     *   **Fine-Tuning Execution**: A pipeline for self-improvement through identity-enriched datasets.

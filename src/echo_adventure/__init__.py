@@ -6,6 +6,13 @@ This package implements a novel architecture with:
 - Layer 2: Trainable inference engine parameters
 - Layer 3: EchoSelf introspection and self-awareness
 
+New in v0.5.0:
+- Real-time AAR state monitoring and analysis
+- Autonomous corpus generation capabilities
+- Self-regulation mechanisms for AAR balance
+- Enhanced introspection with stability tracking
+- Monitoring dashboard data generation
+
 New in v0.4.0:
 - Identity visualization tools (hypergraph, AAR, evolution)
 - Enhanced AAR geometric architecture with self-encoding
@@ -28,7 +35,7 @@ New in v0.2.0:
 - Meta-cognitive reflection capabilities
 """
 
-__version__ = "0.4.0"
+__version__ = "0.5.0"
 
 from .transformer import TransformerLayer
 from .inference_engine import InferenceEngine
@@ -95,6 +102,21 @@ try:
         create_test_prompts
     )
     
+    # New in v0.5.0: Real-time AAR monitoring
+    from .aar_monitor import (
+        AARStateMonitor,
+        AARSelfRegulator,
+        AARSnapshot,
+        AARAlert,
+        create_monitoring_dashboard_data
+    )
+    
+    # New in v0.5.0: Autonomous corpus generation
+    from .corpus_generator import (
+        AutonomousCorpusGenerator,
+        CorpusExample
+    )
+    
     __all__ = [
         # Core components
         "TransformerLayer", 
@@ -141,7 +163,16 @@ try:
         "SelfImprovementLoop",
         "FineTuningConfig",
         "FineTuningResult",
-        "create_test_prompts"
+        "create_test_prompts",
+        # AAR monitoring (v0.5.0)
+        "AARStateMonitor",
+        "AARSelfRegulator",
+        "AARSnapshot",
+        "AARAlert",
+        "create_monitoring_dashboard_data",
+        # Corpus generation (v0.5.0)
+        "AutonomousCorpusGenerator",
+        "CorpusExample"
     ]
 except ImportError:
     # Torch not available, only export base components
