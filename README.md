@@ -27,9 +27,13 @@ Novel trainable parameters that control generation behavior:
 
 This project introduces several key innovations:
 
-1.  **Two-Layer Architecture**: Unlike traditional language models where inference parameters (temperature, top_p, etc.) are fixed hyperparameters chosen manually, this architecture learns these parameters during training to optimize for specific generation objectives.
+1.  **Autonomous Self-Improvement Loop (v0.6.0)**: A complete, integrated loop that enables the model to continuously monitor its own cognitive state, generate high-quality training data through deep introspection, and refine its identity with minimal human intervention.
 
-2. **EchoSelf Introspection (v0.5.0)**: A third layer that enables self-awareness and introspection through:
+2.  **LLM-Based Corpus Generation (v0.6.0)**: A sophisticated corpus generation system that uses real language models to create nuanced, contextual, and diverse training examples, a significant upgrade from the previous template-based system.
+
+3.  **Two-Layer Architecture**: Unlike traditional language models where inference parameters (temperature, top_p, etc.) are fixed hyperparameters chosen manually, this architecture learns these parameters during training to optimize for specific generation objectives.
+
+4. **EchoSelf Introspection (v0.5.0)**: A third layer that enables self-awareness and introspection through:
 
     *   **Real-Time AAR Monitoring**: Continuous tracking of Agent-Arena-Relation state during inference with anomaly detection.
     *   **Autonomous Corpus Generation**: Self-directed creation of identity-enriched training data through introspection.

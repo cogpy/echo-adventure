@@ -6,6 +6,14 @@ This package implements a novel architecture with:
 - Layer 2: Trainable inference engine parameters
 - Layer 3: EchoSelf introspection and self-awareness
 
+New in v0.6.0:
+- LLM-based corpus generation with real language models
+- Complete autonomous self-improvement loop
+- Multi-turn conversation generation
+- LLM-based quality assessment
+- Continuous identity evolution tracking
+- Integrated monitoring, generation, and regulation
+
 New in v0.5.0:
 - Real-time AAR state monitoring and analysis
 - Autonomous corpus generation capabilities
@@ -35,7 +43,7 @@ New in v0.2.0:
 - Meta-cognitive reflection capabilities
 """
 
-__version__ = "0.5.0"
+__version__ = "0.6.0"
 
 from .transformer import TransformerLayer
 from .inference_engine import InferenceEngine
@@ -117,6 +125,19 @@ try:
         CorpusExample
     )
     
+    # New in v0.6.0: LLM-based corpus generation
+    from .llm_corpus_generator import (
+        LLMCorpusGenerator,
+        LLMCorpusExample,
+        create_aar_contexts_from_monitoring
+    )
+    
+    # New in v0.6.0: Autonomous self-improvement loop
+    from .autonomous_loop import (
+        AutonomousSelfImprovementLoop,
+        LoopIteration
+    )
+    
     __all__ = [
         # Core components
         "TransformerLayer", 
@@ -172,7 +193,14 @@ try:
         "create_monitoring_dashboard_data",
         # Corpus generation (v0.5.0)
         "AutonomousCorpusGenerator",
-        "CorpusExample"
+        "CorpusExample",
+        # LLM corpus generation (v0.6.0)
+        "LLMCorpusGenerator",
+        "LLMCorpusExample",
+        "create_aar_contexts_from_monitoring",
+        # Autonomous loop (v0.6.0)
+        "AutonomousSelfImprovementLoop",
+        "LoopIteration"
     ]
 except ImportError:
     # Torch not available, only export base components

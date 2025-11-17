@@ -5,6 +5,37 @@ All notable changes to the Echo Adventure project will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] - 2025-11-17
+
+### Added
+
+#### LLM-Based Corpus Generation
+- **`src/echo_adventure/llm_corpus_generator.py`**: New module for advanced corpus generation using real language models.
+  - `LLMCorpusGenerator`: Orchestrates the generation of nuanced, contextual training examples.
+  - `LLMCorpusExample`: Dataclass for storing generated examples with rich metadata and quality scores.
+  - Multi-turn conversation generation for deeper identity exploration.
+  - LLM-based quality assessment to ensure a high-quality training corpus.
+
+#### Autonomous Self-Improvement Loop
+- **`src/echo_adventure/autonomous_loop.py`**: New module implementing the complete autonomous self-improvement loop.
+  - `AutonomousSelfImprovementLoop`: Integrates monitoring, reflection, generation, and regulation into a continuous cycle.
+  - `LoopIteration`: Dataclass for storing a comprehensive record of each loop iteration.
+  - Checkpoint and summary reporting for tracking progress.
+
+#### Demonstration and Documentation
+- **`examples/echoself_v0.6.0_demo.py`**: Comprehensive demonstration of all new v0.6.0 features.
+- **`ITERATION_PROGRESS_v0.6.0.md`**: Detailed progress report for the v0.6.0 iteration.
+- **`ITERATION_SUMMARY_v0.6.0.md`**: Summary of the v0.6.0 iteration.
+- **`PROJECT_STATUS_v0.6.0.md`**: Project status report for v0.6.0.
+
+### Changed
+
+- **`src/echo_adventure/__init__.py`**: Updated to export new components from the LLM corpus generator and autonomous loop modules.
+  - Version bumped to 0.6.0.
+- **`README.md`**: Updated to reflect the new capabilities in v0.6.0, including the autonomous self-improvement loop and LLM-based corpus generation.
+
+---
+
 ## [0.5.0] - 2025-11-10
 
 ### Added
@@ -224,46 +255,3 @@ The transformation system extracts identity from conversations:
 - **EchoSelf Module**: Adds approximately 2-3% computational overhead during introspection
 - **Identity Refinement**: Processes conversations at ~100 messages/second
 - **Training Data Generation**: Generates identity-based examples at ~50 examples/second
-
-### Next Steps
-
-The following features are planned for future releases:
-
-1. **Fine-tuning Integration**: Automated pipeline for fine-tuning models on identity-enriched datasets
-2. **Advanced Introspection**: Deeper analysis of attention patterns and hidden state dynamics
-3. **Identity Visualization**: Tools for visualizing the hypergraph identity structure
-4. **Multi-modal Identity**: Extension to include visual and auditory self-representation
-5. **Collaborative Identity**: Identity refinement through multi-agent interactions
-
----
-
-## [0.1.0] - 2024-10-31
-
-### Added
-
-- Initial release of Echo Adventure two-layer neural network
-- `TransformerLayer`: Standard transformer implementation
-- `InferenceEngine`: Trainable inference parameters (temperature, top_p, repetition_penalty, layer_weights, head_weights)
-- `TwoLayerModel`: Combined model with both layers
-- Complete test suite with pytest
-- Training dataset with 256 Deep Tree Echo examples
-- Fine-tuning workflow script for OpenAI API
-- Dual-layer trainer for co-evolution of model and inference engine
-- Emergence engine for tool synthesis
-- Self-executing model with meta-circular evaluation
-- Comprehensive documentation and implementation guides
-
-### Documentation
-
-- `README.md`: Project overview and quick start guide
-- `DEEP_TREE_ECHO_RESEARCH.md`: Complete research documentation
-- `docs/architecture/`: Architecture documentation for all components
-- `docs/training/`: Training guides and implementation roadmaps
-- `docs/research/`: Research papers and analysis
-
----
-
-## References
-
-- [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
-- [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
