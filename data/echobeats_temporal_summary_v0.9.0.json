@@ -1,0 +1,19 @@
+{
+  "version": "0.9.0",
+  "total_examples": 70,
+  "sources": {
+    "goal_pursuit": 14,
+    "echodream_advanced": 10,
+    "echo_go_integration": 8,
+    "reservoir_augmented": 38
+  },
+  "new_modules": [
+    "goal_pursuit.py",
+    "echodream_advanced.py"
+  ],
+  "echo_go_changes": [
+    "Re-enabled core/echobeats/ (25 files, 9323 lines)",
+    "Fixed Thought\u2192LLMThought type mismatches",
+    "Fixed UniversalState redeclaration in progressive/"
+  ]
+}

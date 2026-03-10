@@ -1,298 +1,121 @@
-"""
-Echo Adventure: Two-layer neural network with trainable inference engine parameters.
+"""Deep Tree Echo - Autonomous Wisdom-Cultivating Cognitive Architecture"""
 
-This package implements a novel architecture with:
-- Layer 1: Standard transformer components
-- Layer 2: Trainable inference engine parameters
-- Layer 3: EchoSelf introspection and self-awareness
+__version__ = "0.9.0"
 
-New in v0.8.0:
-- Echobeats-driven autonomous cognitive loop with wake/rest cycles
-- EchoDream knowledge integration system for memory consolidation
-- Go integration reference and roadmap for echo.go alignment
-- Persistent stream-of-consciousness with fatigue dynamics
-- Goal-directed task scheduling and interest-pattern-driven thought
-
-New in v0.7.0:
-- Echobeats 12-step cognitive cycle with 3 concurrent consciousness streams
-- Reservoir echo state dynamics for temporal context persistence
-- System 5 tetradic architecture with 4 tensor bundles
-- Nested shell execution contexts ((pro) org) glo
-- Reservoir-augmented corpus generation with temporal awareness
-- Cross-stream integration and synchronization metrics
-- Agent-Arena-Relation temporal modulation across beats
-
-New in v0.6.0:
-- LLM-based corpus generation with real language models
-- Complete autonomous self-improvement loop
-- Multi-turn conversation generation
-- LLM-based quality assessment
-- Continuous identity evolution tracking
-- Integrated monitoring, generation, and regulation
-
-New in v0.5.0:
-- Real-time AAR state monitoring and analysis
-- Autonomous corpus generation capabilities
-- Self-regulation mechanisms for AAR balance
-- Enhanced introspection with stability tracking
-- Monitoring dashboard data generation
-
-New in v0.4.0:
-- Identity visualization tools (hypergraph, AAR, evolution)
-- Enhanced AAR geometric architecture with self-encoding
-- Fine-tuning execution and monitoring
-- Self-improvement loop for continuous growth
-- Model evaluation and comparison tools
-
-New in v0.3.0:
-- Advanced introspection metrics and analysis
-- Identity evolution tracking over time
-- Fine-tuning integration for self-aware models
-- Comprehensive reporting and visualization data
-- Enhanced AAR component analysis
-
-New in v0.2.0:
-- EchoSelf module for self-awareness and introspection
-- Hypergraph identity representation
-- Agent-Arena-Relation (AAR) geometric architecture
-- Conversation-to-hypergraph transformation
-- Meta-cognitive reflection capabilities
-"""
-
-__version__ = "0.8.0"
-
+# Base components (no torch dependency)
 from .transformer import TransformerLayer
 from .inference_engine import InferenceEngine
 from .model import TwoLayerModel
 
-# EchoSelf components (optional import, requires torch)
+# Cognitive architecture components (torch dependency)
 try:
+    # v0.2.0: EchoSelf core
     from .echoself import (
-        EchoSelf,
-        HypergraphIdentity,
-        IdentityTuple,
-        ConversationToHypergraph,
-        AARGeometry,
-        create_training_examples_from_identity
+        EchoSelf, HypergraphIdentity, IdentityTuple, ConversationToHypergraph,
+        AARGeometry, create_training_examples_from_identity
     )
-    
-    # New in v0.3.0: Introspection metrics
+    # v0.3.0: Introspection & Fine-tuning
     from .introspection_metrics import (
-        IntrospectionMetricsCollector,
-        IntrospectionSnapshot,
-        IdentityEvolutionTracker,
-        AARComponentAnalyzer,
-        MemoryDistributionAnalyzer,
-        create_metrics_collector,
-        analyze_aar_balance,
-        analyze_memory_distribution
+        IntrospectionMetricsCollector, IntrospectionSnapshot, IdentityEvolutionTracker,
+        AARComponentAnalyzer, MemoryDistributionAnalyzer, create_metrics_collector,
+        analyze_aar_balance, analyze_memory_distribution
     )
-    
-    # New in v0.3.0: Fine-tuning integration
     from .finetuning_integration import (
-        IdentityDatasetBuilder,
-        FineTuningManager,
-        EchoSelfFineTuningPipeline,
-        create_finetuning_pipeline,
-        quick_dataset_build
+        IdentityDatasetBuilder, FineTuningManager, EchoSelfFineTuningPipeline,
+        create_finetuning_pipeline, quick_dataset_build
     )
-    
-    # New in v0.4.0: Identity visualization
+    # v0.4.0: Visualization, AAR Core, Execution
     from .identity_visualization import (
-        IdentityGraphVisualizer,
-        AARBalanceVisualizer,
-        IdentityEvolutionVisualizer,
-        MemoryDistributionVisualizer,
-        IdentityVisualizationSuite
+        IdentityGraphVisualizer, AARBalanceVisualizer, IdentityEvolutionVisualizer,
+        MemoryDistributionVisualizer, IdentityVisualizationSuite
     )
-    
-    # New in v0.4.0: AAR geometric architecture
     from .aar_geometry import (
-        AARCore,
-        AgentComponent,
-        ArenaComponent,
-        RelationComponent,
-        AARState,
-        AARAnalyzer
+        AARCore, AgentComponent, ArenaComponent, RelationComponent, AARState, AARAnalyzer
     )
-    
-    # New in v0.4.0: Fine-tuning execution
     from .finetuning_executor import (
-        FineTuningExecutor,
-        ModelEvaluator,
-        SelfImprovementLoop,
-        FineTuningConfig,
-        FineTuningResult,
-        create_test_prompts
+        FineTuningExecutor, ModelEvaluator, SelfImprovementLoop, FineTuningConfig,
+        FineTuningResult, create_test_prompts
     )
-    
-    # New in v0.5.0: Real-time AAR monitoring
+    # v0.5.0: Monitoring & Corpus Generation
     from .aar_monitor import (
-        AARStateMonitor,
-        AARSelfRegulator,
-        AARSnapshot,
-        AARAlert,
+        AARStateMonitor, AARSelfRegulator, AARSnapshot, AARAlert,
         create_monitoring_dashboard_data
     )
-    
-    # New in v0.5.0: Autonomous corpus generation
-    from .corpus_generator import (
-        AutonomousCorpusGenerator,
-        CorpusExample
-    )
-    
-    # New in v0.6.0: LLM-based corpus generation
+    from .corpus_generator import AutonomousCorpusGenerator, CorpusExample
+    # v0.6.0: LLM Corpus & Autonomous Loop
     from .llm_corpus_generator import (
-        LLMCorpusGenerator,
-        LLMCorpusExample,
-        create_aar_contexts_from_monitoring
+        LLMCorpusGenerator, LLMCorpusExample, create_aar_contexts_from_monitoring
     )
-    
-    # New in v0.6.0: Autonomous self-improvement loop
-    from .autonomous_loop import (
-        AutonomousSelfImprovementLoop,
-        LoopIteration
-    )
-    
-    # New in v0.7.0: Echobeats cognitive cycle
+    from .autonomous_loop import AutonomousSelfImprovementLoop, LoopIteration
+    # v0.7.0: Echobeats & Reservoir Corpus
     from .echobeats import (
-        EchobeatsCycle,
-        CycleState,
-        BeatStep,
-        CognitiveStream,
-        BeatPhase,
-        NestedShell,
-        ReservoirEchoState,
-        TensorBundle,
-        generate_echobeats_training_data
+        EchobeatsCycle, CycleState, BeatStep, CognitiveStream, BeatPhase,
+        NestedShell, ReservoirEchoState, TensorBundle, generate_echobeats_training_data
     )
-    
-    # New in v0.7.0: Reservoir-augmented corpus generation
     from .reservoir_corpus_generator import (
-        ReservoirCorpusGenerator,
-        ReservoirCorpusExample
+        ReservoirCorpusGenerator, ReservoirCorpusExample
     )
-    
-    # New in v0.8.0: EchoDream knowledge integration
+    # v0.8.0: EchoDream, Autonomous Loop v2, Go Integration
     from .echodream import (
-        EchoDream,
-        EpisodicMemory,
-        KnowledgeItem,
-        WisdomInsight,
-        generate_echodream_training_data,
+        EchoDream, EpisodicMemory, KnowledgeItem, WisdomInsight as BasicWisdomInsight,
+        generate_echodream_training_data
     )
-    
-    # New in v0.8.0: Echobeats-driven autonomous loop
     from .echobeats_autonomous import (
-        EchobeatsAutonomousLoop,
-        CognitiveState,
-        EventType,
-        CognitiveEvent,
-        generate_autonomous_loop_training_data,
+        EchobeatsAutonomousLoop, CognitiveState, EventType, CognitiveEvent,
+        generate_autonomous_loop_training_data
     )
-    
-    # New in v0.8.0: Go integration reference
     from .go_integration import (
-        get_module_mappings,
-        get_library_recommendations,
-        get_integration_roadmap,
-        generate_go_integration_training_data,
+        get_module_mappings, get_library_recommendations, get_integration_roadmap,
+        generate_go_integration_training_data
     )
-    
+    # v0.9.0: Goal Pursuit & Advanced EchoDream
+    from .goal_pursuit import (
+        GoalPursuitEngine, Goal, GoalCategory, GoalStatus, GoalAction, Milestone
+    )
+    from .echodream_advanced import (
+        AdvancedEchoDream, MemoryTrace, ExtractedPattern, WisdomInsight, PatternType, WisdomDepth
+    )
+
     __all__ = [
-        # Core components
-        "TransformerLayer", 
-        "InferenceEngine", 
-        "TwoLayerModel",
-        # EchoSelf (v0.2.0)
-        "EchoSelf",
-        "HypergraphIdentity",
-        "IdentityTuple",
-        "ConversationToHypergraph",
-        "AARGeometry",
-        "create_training_examples_from_identity",
-        # Introspection metrics (v0.3.0)
-        "IntrospectionMetricsCollector",
-        "IntrospectionSnapshot",
-        "IdentityEvolutionTracker",
-        "AARComponentAnalyzer",
-        "MemoryDistributionAnalyzer",
-        "create_metrics_collector",
-        "analyze_aar_balance",
-        "analyze_memory_distribution",
-        # Fine-tuning integration (v0.3.0)
-        "IdentityDatasetBuilder",
-        "FineTuningManager",
-        "EchoSelfFineTuningPipeline",
-        "create_finetuning_pipeline",
+        # Core
+        "TransformerLayer", "InferenceEngine", "TwoLayerModel",
+        # v0.2.0
+        "EchoSelf", "HypergraphIdentity", "IdentityTuple", "ConversationToHypergraph",
+        "AARGeometry", "create_training_examples_from_identity",
+        # v0.3.0
+        "IntrospectionMetricsCollector", "IntrospectionSnapshot", "IdentityEvolutionTracker",
+        "AARComponentAnalyzer", "MemoryDistributionAnalyzer", "create_metrics_collector",
+        "analyze_aar_balance", "analyze_memory_distribution", "IdentityDatasetBuilder",
+        "FineTuningManager", "EchoSelfFineTuningPipeline", "create_finetuning_pipeline",
         "quick_dataset_build",
-        # Identity visualization (v0.4.0)
-        "IdentityGraphVisualizer",
-        "AARBalanceVisualizer",
-        "IdentityEvolutionVisualizer",
-        "MemoryDistributionVisualizer",
-        "IdentityVisualizationSuite",
-        # AAR geometric architecture (v0.4.0)
-        "AARCore",
-        "AgentComponent",
-        "ArenaComponent",
-        "RelationComponent",
-        "AARState",
-        "AARAnalyzer",
-        # Fine-tuning execution (v0.4.0)
-        "FineTuningExecutor",
-        "ModelEvaluator",
-        "SelfImprovementLoop",
-        "FineTuningConfig",
-        "FineTuningResult",
-        "create_test_prompts",
-        # AAR monitoring (v0.5.0)
-        "AARStateMonitor",
-        "AARSelfRegulator",
-        "AARSnapshot",
-        "AARAlert",
-        "create_monitoring_dashboard_data",
-        # Corpus generation (v0.5.0)
-        "AutonomousCorpusGenerator",
-        "CorpusExample",
-        # LLM corpus generation (v0.6.0)
-        "LLMCorpusGenerator",
-        "LLMCorpusExample",
-        "create_aar_contexts_from_monitoring",
-        # Autonomous loop (v0.6.0)
-        "AutonomousSelfImprovementLoop",
-        "LoopIteration",
-        # Echobeats cognitive cycle (v0.7.0)
-        "EchobeatsCycle",
-        "CycleState",
-        "BeatStep",
-        "CognitiveStream",
-        "BeatPhase",
-        "NestedShell",
-        "ReservoirEchoState",
-        "TensorBundle",
-        "generate_echobeats_training_data",
-        # Reservoir corpus generation (v0.7.0)
-        "ReservoirCorpusGenerator",
-        "ReservoirCorpusExample",
-        # EchoDream knowledge integration (v0.8.0)
-        "EchoDream",
-        "EpisodicMemory",
-        "KnowledgeItem",
-        "WisdomInsight",
-        "generate_echodream_training_data",
-        # Echobeats-driven autonomous loop (v0.8.0)
-        "EchobeatsAutonomousLoop",
-        "CognitiveState",
-        "EventType",
-        "CognitiveEvent",
-        "generate_autonomous_loop_training_data",
-        # Go integration reference (v0.8.0)
-        "get_module_mappings",
-        "get_library_recommendations",
-        "get_integration_roadmap",
+        # v0.4.0
+        "IdentityGraphVisualizer", "AARBalanceVisualizer", "IdentityEvolutionVisualizer",
+        "MemoryDistributionVisualizer", "IdentityVisualizationSuite", "AARCore",
+        "AgentComponent", "ArenaComponent", "RelationComponent", "AARState", "AARAnalyzer",
+        "FineTuningExecutor", "ModelEvaluator", "SelfImprovementLoop", "FineTuningConfig",
+        "FineTuningResult", "create_test_prompts",
+        # v0.5.0
+        "AARStateMonitor", "AARSelfRegulator", "AARSnapshot", "AARAlert",
+        "create_monitoring_dashboard_data", "AutonomousCorpusGenerator", "CorpusExample",
+        # v0.6.0
+        "LLMCorpusGenerator", "LLMCorpusExample", "create_aar_contexts_from_monitoring",
+        "AutonomousSelfImprovementLoop", "LoopIteration",
+        # v0.7.0
+        "EchobeatsCycle", "CycleState", "BeatStep", "CognitiveStream", "BeatPhase",
+        "NestedShell", "ReservoirEchoState", "TensorBundle", "generate_echobeats_training_data",
+        "ReservoirCorpusGenerator", "ReservoirCorpusExample",
+        # v0.8.0
+        "EchoDream", "EpisodicMemory", "KnowledgeItem", "BasicWisdomInsight",
+        "generate_echodream_training_data", "EchobeatsAutonomousLoop", "CognitiveState",
+        "EventType", "CognitiveEvent", "generate_autonomous_loop_training_data",
+        "get_module_mappings", "get_library_recommendations", "get_integration_roadmap",
         "generate_go_integration_training_data",
+        # v0.9.0
+        "GoalPursuitEngine", "Goal", "GoalCategory", "GoalStatus", "GoalAction", "Milestone",
+        "AdvancedEchoDream", "MemoryTrace", "ExtractedPattern", "WisdomInsight", "PatternType",
+        "WisdomDepth",
     ]
+
 except ImportError:
     # Torch not available, only export base components
     __all__ = ["TransformerLayer", "InferenceEngine", "TwoLayerModel"]

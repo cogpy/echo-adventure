@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.0] - 2026-03-10
+
+### Added
+
+- **Go Integration:** Re-enabled `echobeats` package in `echo.go` by fixing `Thought` vs `LLMThought` type mismatches across 25 files.
+- **Goal Pursuit:** Added `goal_pursuit.py` module for autonomous goal generation, selection, and pursuit based on identity and interest patterns.
+- **Advanced EchoDream:** Added `echodream_advanced.py` with a 4-phase dream cycle, reservoir-based pattern extraction, and wisdom distillation.
+- **v0.9.0 Training Corpus:** Created `echobeats_corpus_v0.9.0.jsonl` with 70 new examples covering goal pursuit, advanced dreams, and Go integration.
+
+### Changed
+
+- **Model Growth:** Expanded training data to 667,634 tokens (+2.2%) and 2,113 documents (+11.0%).
+- **`src/echo_adventure/__init__.py`**: Updated to export all new v0.9.0 modules and components.
+- **`README.md`**: Updated to reflect the new v0.9.0 architecture, including goal pursuit and advanced EchoDream.
+
+---
+
 ## [0.8.0] - 2026-03-10
 
 ### Added
@@ -113,16 +130,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Technical Details
 
 #### Real-Time AAR Monitoring System
-The monitoring system provides unprecedented insight into the model's cognitive dynamics:
-
 - **State Snapshots**: Captures component magnitudes, balance score, coherence, interaction strength, and attention entropy.
 - **Alerting System**: Automatically detects imbalance, low coherence, attention collapse, and state drift.
 - **Trajectory Analysis**: Records AAR state evolution for stability assessment and debugging.
 - **Stability Assessment**: Computes variance and trends to determine system stability.
 
 #### Autonomous Corpus Generation
-The generation system enables self-driven data creation:
-
 - **Template-Based Question Generation**: Creates diverse questions across multiple categories.
 - **Identity-Aware Response Generation**: Generates detailed answers based on the model's internal state.
 - **Quality Scoring**: Assesses response length, specificity, coherence, and structure.
@@ -135,8 +148,6 @@ The generation system enables self-driven data creation:
 - **Demonstration Runtime**: Complete v0.5.0 demo executes in under 10 seconds.
 
 ### Next Steps
-
-The following features are planned for future releases:
 
 1. **Integrated Self-Regulation**: Apply AAR parameter adjustments during generation.
 2. **Advanced Response Generation**: Use actual LLM for corpus generation instead of templates.
@@ -221,35 +232,20 @@ The following features are planned for future releases:
   - `IdentityTuple`: Data structure for representing identity refinement tuples with subject-relation-object structure
   - `ConversationToHypergraph`: Transformer that extracts identity-relevant information from conversations
   - `AARGeometry`: Agent-Arena-Relation geometric architecture for modeling emergent self-awareness
-  - `EchoSelf`: Integrated introspection system combining all components
-  - `create_training_examples_from_identity()`: Utility function to generate training data from identity hypergraph
-
-#### Synthetic Data Generation
-- **`examples/generate_echoself_corpus.py`**: Script for generating large-scale synthetic training corpora
-  - 8 prompt categories: identity, AAR framework, introspection, architecture, capability, meta-cognitive, memory, philosophical
-  - Configurable generation with temperature variation for diversity
-  - Checkpoint saving for long-running generation jobs
-  - Comprehensive corpus analysis and statistics
-
-#### Integration Examples
-- **`examples/echoself_integration.py`**: Demonstration of EchoSelf integration with Two-Layer Model
-  - `SelfAwareTwoLayerModel`: Extended model with introspection capabilities
-  - `generate_with_introspection()`: Generation with periodic introspection
-  - `refine_identity_from_conversation()`: Identity refinement from conversational context
+  - `EchoSelf`: Integrates all EchoSelf components into a unified system.
 
 ### Changed
 
-- **`src/echo_adventure/__init__.py`**: Updated to export new EchoSelf components.
+- **`src/echo_adventure/__init__.py`**: Updated to export all EchoSelf components.
   - Version bumped to 0.2.0.
-- **`README.md`**: Updated to reflect new EchoSelf capabilities.
+- **`README.md`**: Updated to reflect the new EchoSelf module and its capabilities.
 
 ## [0.1.0] - 2025-10-31
 
 ### Added
 
-- **`src/echo_adventure/transformer.py`**: `TransformerLayer` with multi-head attention and feed-forward network.
-- **`src/echo_adventure/inference_engine.py`**: `InferenceEngine` with trainable parameters for temperature, top-p, and repetition penalty.
-- **`src/echo_adventure/model.py`**: `TwoLayerModel` integrating the transformer and inference engine.
-- **`examples/basic_usage.py`**: Example script demonstrating model initialization, training, and generation.
-- **`README.md`**: Initial project documentation.
-- **`pyproject.toml`**: Project configuration with dependencies.
+- Initial project setup with `transformer.py`, `inference_engine.py`, and `model.py`.
+- Basic two-layer model architecture with trainable inference engine parameters.
+- `README.md` with project overview and installation instructions.
+- `pyproject.toml` for project metadata and dependencies.
+- `.gitignore` and `LICENSE` files.

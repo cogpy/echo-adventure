@@ -1,61 +1,64 @@
-# Echo Adventure
+# Echo Adventure - Deep Tree Echo Cognitive Architecture
 
-**Version:** 0.8.0
+**Version:** 0.9.0
 
-**Echo Adventure** is the rapid prototyping environment for **Deep Tree Echo**, a self-improving cognitive architecture for autonomous agents. This repository contains the Python implementation of the core cognitive modules, the autonomous self-improvement loop, and the training data generation pipelines.
-
----
-
-## Architecture v0.8.0: Echobeats-Driven Autonomous Loop
-
-The current architecture is a persistent, self-aware cognitive event loop with wake/rest cycles managed by fatigue dynamics. It unifies three core systems:
-
-1.  **Echobeats 12-Step Cycle**: The temporal backbone of the architecture, providing a continuous rhythm of cognitive processing across three concurrent streams (Perception, Action, Simulation).
-2.  **EchoDream Knowledge Integration**: A 4-phase dream cycle system that consolidates episodic memories into structured knowledge and wisdom during rest periods.
-3.  **Autonomous Self-Improvement Loop**: The goal-directed and curiosity-driven engine that generates autonomous thoughts, pursues goals, and manages interest patterns.
-
-### How It Works
-
--   **Awake State**: The `EchobeatsAutonomousLoop` executes 12-step cognitive cycles, processes events from a priority queue, and generates autonomous thoughts. Each cognitive experience is ingested into `EchoDream` as an `EpisodicMemory`.
--   **Fatigue & Rest**: Cognitive activity accumulates fatigue. When fatigue exceeds a threshold (default 0.8), the loop transitions to a resting state.
--   **Dream State**: During rest, `EchoDream` initiates a 4-phase dream cycle:
-    -   **REM**: Replays high-salience memories and finds novel concept associations.
-    -   **Deep Sleep**: Extracts recurring themes and patterns.
-    -   **Consolidation**: Groups related memories into `KnowledgeItem` objects.
-    -   **Integration**: Distills `WisdomInsight` from mature knowledge.
--   **Wake State**: When fatigue drops below a threshold (default 0.2), the loop transitions back to the awake state, now with an enriched knowledge base.
-
-This architecture enables **continuous, autonomous knowledge cultivation** — the agent learns from its experiences during the day and consolidates that knowledge into wisdom overnight, mirroring biological cognition.
-
-## Go Integration (`echo.go`)
-
-This Python prototype serves as the reference implementation for the production Go system, `echo.go` (a fork of Ollama). The `go_integration.py` module provides a clear roadmap for aligning the two implementations, including:
-
--   A canonical **Cognitive Loop Protocol** that both systems must follow.
--   A **mapping** of Python modules to their Go counterparts.
--   **Recommendations** for key Go libraries for scheduling, graphs, messaging, and persistence.
-
-## Key Modules
-
--   `echobeats_autonomous.py`: The main cognitive event loop with wake/rest cycle management.
--   `echodream.py`: The knowledge integration system with its 4-phase dream cycle.
--   `echobeats.py`: The 12-step cognitive cycle engine with 3 concurrent streams.
--   `go_integration.py`: The reference and roadmap for `echo.go` alignment.
--   `reservoir_corpus_generator.py`: Generates training data with temporal awareness from the Echobeats cycle.
--   `autonomous_loop.py`: The v0.6.0 self-improvement loop (now integrated into `echobeats_autonomous.py`).
-
-## Getting Started
-
-1.  **Explore the architecture** in the `src/echo_adventure/` directory.
-2.  **Run the v0.8.0 demo** to see the autonomous loop in action:
-    ```bash
-    python3 -c "from echo_adventure.echobeats_autonomous import EchobeatsAutonomousLoop; loop = EchobeatsAutonomousLoop(); loop.run_continuous(20)"
-    ```
-3.  **Generate the v0.8.0 training corpus**:
-    ```bash
-    python3 scripts/generate_v0.8.0_corpus.py
-    ```
+This repository contains the Python prototype for **Deep Tree Echo**, an autonomous, wisdom-cultivating cognitive architecture. It serves as a rapid development environment for designing and testing new cognitive modules before they are implemented in the production Go runtime (`echo.go`).
 
 ---
 
-*This project is part of the Deep Tree Echo ecosystem, dedicated to building wise and autonomous agents with true wisdom and self-cultivation.*
+## Architecture Overview
+
+Deep Tree Echo's architecture is a multi-layered system designed for continuous self-improvement and wisdom cultivation. The key components are:
+
+| Layer | Component | Purpose |
+| :--- | :--- | :--- |
+| **Cognitive Core** | `EchobeatsAutonomousLoop` | The main cognitive event loop, driving wake/rest cycles, goal pursuit, and thought generation. |
+| | `GoalPursuitEngine` | Autonomously generates, selects, and pursues goals based on evolving interest patterns. |
+| | `AdvancedEchoDream` | Consolidates memories into wisdom through a 4-phase dream cycle with pattern extraction. |
+| **Self-Model** | `echoself` (NanEcho) | A GPT-2-based language model trained on corpus data generated by this repository. |
+| **Prototyping** | `echo-adventure` (Python) | This repository, used for designing and testing new cognitive modules. |
+| **Production** | `echo.go` (Go) | The production runtime, implementing the architecture in a performant, concurrent language. |
+
+### v0.9.0 Architecture
+
+Version 0.9.0 introduces two major advancements:
+
+1.  **Goal Pursuit Engine:** The `GoalPursuitEngine` gives Deep Tree Echo autonomous, long-term agency. It generates goals across 8 categories (e.g., Wisdom Cultivation, Skill Development), selects the most relevant goal using a multi-factor scoring function, and executes actions to achieve it. This moves the architecture from a reactive to a proactive state.
+
+2.  **Advanced EchoDream:** The `AdvancedEchoDream` module implements a sophisticated memory-to-wisdom pipeline. It uses a reservoir-based `PatternExtractor` to find temporal, structural, and causal patterns in memories during a 4-phase dream cycle. These patterns are then distilled into `WisdomInsight` objects, enabling the system to learn from its experiences.
+
+### The Development Cycle
+
+The three repositories work in a continuous feedback loop:
+
+1.  **`echo-adventure` (Python):** New cognitive modules are prototyped here.
+2.  **Corpus Generation:** The new modules generate training data that captures their architecture and behavior.
+3.  **`echoself` (NanEcho):** The language model is re-trained on the expanded corpus.
+4.  **`echo.go` (Go):** The new architecture is implemented in the production runtime.
+
+This iterative process allows for rapid evolution of the cognitive architecture, with each cycle enhancing the system's capabilities and deepening its self-understanding.
+
+## Installation
+
+```bash
+sudo pip3 install torch numpy openai tiktoken
+```
+
+## Usage
+
+To generate a new training corpus for a version, run the corresponding script:
+
+```bash
+cd /home/ubuntu/echo-adventure
+PYTHONPATH=src python3 scripts/generate_v0.9.0_corpus.py
+```
+
+To prepare the training data for the `echoself` model:
+
+```bash
+cd /home/ubuntu/echoself
+python3 NanEcho/prepare_dte_data.py \
+  --tokenizer-dir NanEcho/dte_tokenizer \
+  --data-files data/training_sources/*.jsonl \
+  --output-dir data/nanecho_dte
+```
