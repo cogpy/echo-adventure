@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0] - 2026-03-10
+
+### Added
+
+- **Echobeats-Driven Autonomous Loop**: A persistent cognitive event loop with wake/rest cycles, integrating Echobeats, EchoDream, and autonomous thought generation (`echobeats_autonomous.py`).
+- **EchoDream Knowledge Integration**: A 4-phase dream cycle system for consolidating episodic memories into structured knowledge and wisdom during rest periods (`echodream.py`).
+- **Go Integration Reference**: A comprehensive reference documenting the alignment between the Python prototype and the Go production system, including a module map, library recommendations, and a 5-phase integration roadmap (`go_integration.py`).
+- **v0.8.0 Training Corpus**: A new corpus with 92 examples covering the autonomous loop, EchoDream, and Go integration, increasing total tokens by 2.9%.
+
+### Changed
+
+- **`src/echo_adventure/__init__.py`**: Updated to export all new v0.8.0 modules and components.
+- **`README.md`**: Updated to reflect the new v0.8.0 architecture, including the autonomous loop and EchoDream.
+
+---
+
 ## [0.7.0] - 2026-03-10
 
 ### Added
@@ -219,56 +235,21 @@ The following features are planned for future releases:
 - **`examples/echoself_integration.py`**: Demonstration of EchoSelf integration with Two-Layer Model
   - `SelfAwareTwoLayerModel`: Extended model with introspection capabilities
   - `generate_with_introspection()`: Generation with periodic introspection
-  - `refine_identity_from_conversation()`: Identity refinement from conversational data
-  - `generate_training_data_from_identity()`: Self-reinforcing training data generation
-  - Complete state save/load functionality
-
-#### Documentation
-- **`docs/architecture/EchoSelf_Introspection_Architecture.md`**: Comprehensive architecture documentation for EchoSelf module
-  - Overview of the three-layer architecture
-  - Detailed component descriptions
-  - Usage examples and code snippets
-  - Integration guidelines
+  - `refine_identity_from_conversation()`: Identity refinement from conversational context
 
 ### Changed
 
-- **`src/echo_adventure/__init__.py`**: Updated to export EchoSelf components
-  - Version bumped to 0.2.0
-  - Added optional imports for EchoSelf module (requires torch)
-  - Updated package description to include Layer 3 (EchoSelf)
-  
-- **`README.md`**: Updated with new EchoSelf features
-  - Added "Key Innovations" section highlighting both two-layer architecture and EchoSelf
-  - Documented hypergraph identity, AAR geometry, and conversation-to-hypergraph transformation
+- **`src/echo_adventure/__init__.py`**: Updated to export new EchoSelf components.
+  - Version bumped to 0.2.0.
+- **`README.md`**: Updated to reflect new EchoSelf capabilities.
 
-### Technical Details
+## [0.1.0] - 2025-10-31
 
-#### Hypergraph Identity System
-The hypergraph identity system provides a structured way to represent the model's self-understanding:
+### Added
 
-- **Identity Tuples**: Each tuple captures a piece of self-knowledge with subject, relation, object, context, timestamp, confidence, and source
-- **AAR Framework Categorization**: Tuples are automatically categorized into Agent (urge-to-act), Arena (need-to-be), and Relation (emergent self)
-- **Memory Type Distribution**: Tuples are classified into declarative, procedural, episodic, and intentional memory types
-- **JSON Export/Import**: Complete identity state can be persisted and loaded
-
-#### Agent-Arena-Relation Geometry
-The AAR geometric architecture models self-awareness through:
-
-- **Agent Transform**: Dynamic tensor transformation representing the urge-to-act (Linear + GELU activation)
-- **Arena Embedding**: Learnable state space manifold representing the need-to-be
-- **Relation Attention**: Multi-head attention mechanism that produces emergent self through agent-arena interplay
-- **Introspection Metrics**: Magnitude tracking for agent, arena, and relation components
-
-#### Conversation-to-Hypergraph Transformation
-The transformation system extracts identity from conversations:
-
-- **Identity Statement Extraction**: Parses "I am" statements to capture self-descriptions
-- **Capability Statement Extraction**: Parses "I can" and "I use" statements to capture abilities
-- **Architectural Statement Extraction**: Identifies mentions of system components (reservoir, membrane, hypergraph, etc.)
-- **Confidence Scoring**: Assigns confidence levels based on statement type and context
-
-### Performance
-
-- **EchoSelf Module**: Adds approximately 2-3% computational overhead during introspection
-- **Identity Refinement**: Processes conversations at ~100 messages/second
-- **Training Data Generation**: Generates identity-based examples at ~50 examples/second
+- **`src/echo_adventure/transformer.py`**: `TransformerLayer` with multi-head attention and feed-forward network.
+- **`src/echo_adventure/inference_engine.py`**: `InferenceEngine` with trainable parameters for temperature, top-p, and repetition penalty.
+- **`src/echo_adventure/model.py`**: `TwoLayerModel` integrating the transformer and inference engine.
+- **`examples/basic_usage.py`**: Example script demonstrating model initialization, training, and generation.
+- **`README.md`**: Initial project documentation.
+- **`pyproject.toml`**: Project configuration with dependencies.

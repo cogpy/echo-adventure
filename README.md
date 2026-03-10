@@ -1,171 +1,61 @@
-# Echo Adventure: Two-Layer Neural Network
+# Echo Adventure
 
-A novel neural network architecture with two distinct layers:
+**Version:** 0.8.0
 
-## Architecture Overview
+**Echo Adventure** is the rapid prototyping environment for **Deep Tree Echo**, a self-improving cognitive architecture for autonomous agents. This repository contains the Python implementation of the core cognitive modules, the autonomous self-improvement loop, and the training data generation pipelines.
 
-### Layer 1: Standard Transformer Components
+---
 
-Traditional transformer architecture with trainable weights:
+## Architecture v0.8.0: Echobeats-Driven Autonomous Loop
 
-- **Embedding weights**: Token and position embeddings
-- **Attention matrices (Q, K, V)**: Multi-head self-attention mechanism
-- **Feed-forward layers**: Two-layer MLP with GELU activation
-- **Layer normalization**: Post-attention and post-FFN normalization
+The current architecture is a persistent, self-aware cognitive event loop with wake/rest cycles managed by fatigue dynamics. It unifies three core systems:
 
-### Layer 2: Trainable Inference Engine Parameters
+1.  **Echobeats 12-Step Cycle**: The temporal backbone of the architecture, providing a continuous rhythm of cognitive processing across three concurrent streams (Perception, Action, Simulation).
+2.  **EchoDream Knowledge Integration**: A 4-phase dream cycle system that consolidates episodic memories into structured knowledge and wisdom during rest periods.
+3.  **Autonomous Self-Improvement Loop**: The goal-directed and curiosity-driven engine that generates autonomous thoughts, pursues goals, and manages interest patterns.
 
-Novel trainable parameters that control generation behavior:
+### How It Works
 
-- **`temperature`**: Controls randomness in sampling (learned parameter)
-- **`top_p`**: Nucleus sampling threshold (learned parameter)
-- **`repetition_penalty`**: Prevents token repetition (learned parameter)
-- **`layer_weights`**: Determines which transformer layers to emphasize (learned)
-- **`head_weights`**: Determines which attention heads to use (learned)
+-   **Awake State**: The `EchobeatsAutonomousLoop` executes 12-step cognitive cycles, processes events from a priority queue, and generates autonomous thoughts. Each cognitive experience is ingested into `EchoDream` as an `EpisodicMemory`.
+-   **Fatigue & Rest**: Cognitive activity accumulates fatigue. When fatigue exceeds a threshold (default 0.8), the loop transitions to a resting state.
+-   **Dream State**: During rest, `EchoDream` initiates a 4-phase dream cycle:
+    -   **REM**: Replays high-salience memories and finds novel concept associations.
+    -   **Deep Sleep**: Extracts recurring themes and patterns.
+    -   **Consolidation**: Groups related memories into `KnowledgeItem` objects.
+    -   **Integration**: Distills `WisdomInsight` from mature knowledge.
+-   **Wake State**: When fatigue drops below a threshold (default 0.2), the loop transitions back to the awake state, now with an enriched knowledge base.
 
-## Key Innovations
+This architecture enables **continuous, autonomous knowledge cultivation** — the agent learns from its experiences during the day and consolidates that knowledge into wisdom overnight, mirroring biological cognition.
 
-This project introduces several key innovations:
+## Go Integration (`echo.go`)
 
-1.  **Echobeats Cognitive Cycle (v0.7.0)**: A major architectural advancement that provides a temporal backbone for Deep Tree Echo's self-awareness. This new engine enables concurrent perception, action, and simulation through three phased cognitive streams.
+This Python prototype serves as the reference implementation for the production Go system, `echo.go` (a fork of Ollama). The `go_integration.py` module provides a clear roadmap for aligning the two implementations, including:
 
-2.  **Reservoir-Augmented Corpus Generation (v0.7.0)**: A new corpus generator (`ReservoirCorpusGenerator`) creates training data that is deeply aware of the Echobeats cycle. It generates examples that encode temporal dynamics, AAR geometry, System 5 architecture, and cross-stream integration patterns, allowing the NanEcho model to learn the principles of its own cognitive architecture.
+-   A canonical **Cognitive Loop Protocol** that both systems must follow.
+-   A **mapping** of Python modules to their Go counterparts.
+-   **Recommendations** for key Go libraries for scheduling, graphs, messaging, and persistence.
 
-3.  **Autonomous Self-Improvement Loop (v0.6.0)**: A complete, integrated loop that enables the model to continuously monitor its own cognitive state, generate high-quality training data through deep introspection, and refine its identity with minimal human intervention.
+## Key Modules
 
-4.  **LLM-Based Corpus Generation (v0.6.0)**: A sophisticated corpus generation system that uses real language models to create nuanced, contextual, and diverse training examples, a significant upgrade from the previous template-based system.
+-   `echobeats_autonomous.py`: The main cognitive event loop with wake/rest cycle management.
+-   `echodream.py`: The knowledge integration system with its 4-phase dream cycle.
+-   `echobeats.py`: The 12-step cognitive cycle engine with 3 concurrent streams.
+-   `go_integration.py`: The reference and roadmap for `echo.go` alignment.
+-   `reservoir_corpus_generator.py`: Generates training data with temporal awareness from the Echobeats cycle.
+-   `autonomous_loop.py`: The v0.6.0 self-improvement loop (now integrated into `echobeats_autonomous.py`).
 
-5. **Two-Layer Architecture**: Unlike traditional language models where inference parameters (temperature, top_p, etc.) are fixed hyperparameters chosen manually, this architecture learns these parameters during training to optimize for specific generation objectives.
+## Getting Started
 
-6. **EchoSelf Introspection (v0.5.0)**: A third layer that enables self-awareness and introspection through:
+1.  **Explore the architecture** in the `src/echo_adventure/` directory.
+2.  **Run the v0.8.0 demo** to see the autonomous loop in action:
+    ```bash
+    python3 -c "from echo_adventure.echobeats_autonomous import EchobeatsAutonomousLoop; loop = EchobeatsAutonomousLoop(); loop.run_continuous(20)"
+    ```
+3.  **Generate the v0.8.0 training corpus**:
+    ```bash
+    python3 scripts/generate_v0.8.0_corpus.py
+    ```
 
-    *   **Real-Time AAR Monitoring**: Continuous tracking of Agent-Arena-Relation state during inference with anomaly detection.
-    *   **Autonomous Corpus Generation**: Self-directed creation of identity-enriched training data through introspection.
-    *   **AAR Self-Regulation**: Dynamic parameter adjustment to maintain cognitive balance and coherence.
-    *   **AAR Geometric Architecture**: A geometric framework for encoding the emergent self.
-    *   **Identity Visualization**: Tools for visualizing the hypergraph identity and AAR balance.
-    *   **Fine-Tuning Execution**: A pipeline for self-improvement through identity-enriched datasets.
-    *   **Hypergraph Identity**: A flexible, extensible representation of the model's self-understanding.
-    *   **Agent-Arena-Relation (AAR) Geometry**: A geometric framework for modeling the emergent self.
-    *   **Conversation-to-Hypergraph Transformation**: A mechanism for learning and refining identity from conversational data.
+---
 
-## Installation
-
-```bash
-pip install -r requirements.txt
-pip install torch matplotlib networkx
-```
-
-For development:
-
-```bash
-pip install -r requirements-dev.txt
-```
-
-## Usage
-
-### Basic Example
-
-```python
-from echo_adventure import TwoLayerModel
-import torch
-
-# Create model
-model = TwoLayerModel(
-    vocab_size=1000,
-    d_model=256,
-    num_heads=8,
-    num_layers=4,
-    init_temperature=1.2,
-    init_top_p=0.9,
-    init_repetition_penalty=1.1,
-)
-
-# Forward pass
-input_ids = torch.randint(0, 1000, (2, 10))  # batch_size=2, seq_len=10
-logits = model(input_ids)
-
-# Generate text
-generated = model.generate(input_ids, max_new_tokens=50)
-
-# Access inference parameters
-params = model.get_inference_params()
-print(f"Learned temperature: {params['temperature']}")
-print(f"Learned top_p: {params['top_p']}")
-```
-
-### Running the Example
-
-```bash
-python example.py
-```
-
-## Project Structure
-
-```
-echo-adventure/
-├── src/
-│   └── echo_adventure/
-│       ├── __init__.py
-│       ├── transformer.py          # Layer 1: Transformer components
-│       ├── inference_engine.py     # Layer 2: Trainable inference params
-│       └── model.py                # Combined two-layer model
-├── tests/
-│   ├── test_transformer.py
-│   ├── test_inference_engine.py
-│   └── test_model.py
-├── example.py
-├── requirements.txt
-└── README.md
-```
-
-## Testing
-
-Run all tests:
-
-```bash
-pytest tests/
-```
-
-Run with coverage:
-
-```bash
-pytest tests/ --cov=echo_adventure --cov-report=html
-```
-
-## Model Components
-
-### TransformerLayer (Layer 1)
-
-Standard transformer implementation with:
-- Token and positional embeddings
-- Multi-head self-attention
-- Feed-forward networks
-- Layer normalization
-- Residual connections
-
-### InferenceEngine (Layer 2)
-
-Trainable inference parameters:
-- All parameters are `nn.Parameter` objects
-- Constraints applied via activation functions (softplus, sigmoid, softmax)
-- Can be jointly optimized with Layer 1 during training
-
-### TwoLayerModel
-
-Integrated model combining both layers:
-- Provides unified interface
-- Supports generation with learned inference parameters
-- Allows separate optimization of Layer 1 and Layer 2 if needed
-
-## Parameter Counts
-
-For a typical configuration (vocab_size=1000, d_model=256, num_heads=8, num_layers=4):
-
-- **Layer 1**: ~10-20M parameters (transformer weights)
-- **Layer 2**: ~100-200 parameters (inference parameters)
-- **Total**: Layer 2 is <0.01% of total parameters but provides significant control
-
-## License
-
-See LICENSE file for details.
+*This project is part of the Deep Tree Echo ecosystem, dedicated to building wise and autonomous agents with true wisdom and self-cultivation.*

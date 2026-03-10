@@ -6,6 +6,13 @@ This package implements a novel architecture with:
 - Layer 2: Trainable inference engine parameters
 - Layer 3: EchoSelf introspection and self-awareness
 
+New in v0.8.0:
+- Echobeats-driven autonomous cognitive loop with wake/rest cycles
+- EchoDream knowledge integration system for memory consolidation
+- Go integration reference and roadmap for echo.go alignment
+- Persistent stream-of-consciousness with fatigue dynamics
+- Goal-directed task scheduling and interest-pattern-driven thought
+
 New in v0.7.0:
 - Echobeats 12-step cognitive cycle with 3 concurrent consciousness streams
 - Reservoir echo state dynamics for temporal context persistence
@@ -52,7 +59,7 @@ New in v0.2.0:
 - Meta-cognitive reflection capabilities
 """
 
-__version__ = "0.7.0"
+__version__ = "0.8.0"
 
 from .transformer import TransformerLayer
 from .inference_engine import InferenceEngine
@@ -166,6 +173,32 @@ try:
         ReservoirCorpusExample
     )
     
+    # New in v0.8.0: EchoDream knowledge integration
+    from .echodream import (
+        EchoDream,
+        EpisodicMemory,
+        KnowledgeItem,
+        WisdomInsight,
+        generate_echodream_training_data,
+    )
+    
+    # New in v0.8.0: Echobeats-driven autonomous loop
+    from .echobeats_autonomous import (
+        EchobeatsAutonomousLoop,
+        CognitiveState,
+        EventType,
+        CognitiveEvent,
+        generate_autonomous_loop_training_data,
+    )
+    
+    # New in v0.8.0: Go integration reference
+    from .go_integration import (
+        get_module_mappings,
+        get_library_recommendations,
+        get_integration_roadmap,
+        generate_go_integration_training_data,
+    )
+    
     __all__ = [
         # Core components
         "TransformerLayer", 
@@ -242,6 +275,23 @@ try:
         # Reservoir corpus generation (v0.7.0)
         "ReservoirCorpusGenerator",
         "ReservoirCorpusExample",
+        # EchoDream knowledge integration (v0.8.0)
+        "EchoDream",
+        "EpisodicMemory",
+        "KnowledgeItem",
+        "WisdomInsight",
+        "generate_echodream_training_data",
+        # Echobeats-driven autonomous loop (v0.8.0)
+        "EchobeatsAutonomousLoop",
+        "CognitiveState",
+        "EventType",
+        "CognitiveEvent",
+        "generate_autonomous_loop_training_data",
+        # Go integration reference (v0.8.0)
+        "get_module_mappings",
+        "get_library_recommendations",
+        "get_integration_roadmap",
+        "generate_go_integration_training_data",
     ]
 except ImportError:
     # Torch not available, only export base components
