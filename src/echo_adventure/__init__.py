@@ -6,6 +6,15 @@ This package implements a novel architecture with:
 - Layer 2: Trainable inference engine parameters
 - Layer 3: EchoSelf introspection and self-awareness
 
+New in v0.7.0:
+- Echobeats 12-step cognitive cycle with 3 concurrent consciousness streams
+- Reservoir echo state dynamics for temporal context persistence
+- System 5 tetradic architecture with 4 tensor bundles
+- Nested shell execution contexts ((pro) org) glo
+- Reservoir-augmented corpus generation with temporal awareness
+- Cross-stream integration and synchronization metrics
+- Agent-Arena-Relation temporal modulation across beats
+
 New in v0.6.0:
 - LLM-based corpus generation with real language models
 - Complete autonomous self-improvement loop
@@ -43,7 +52,7 @@ New in v0.2.0:
 - Meta-cognitive reflection capabilities
 """
 
-__version__ = "0.6.0"
+__version__ = "0.7.0"
 
 from .transformer import TransformerLayer
 from .inference_engine import InferenceEngine
@@ -138,6 +147,25 @@ try:
         LoopIteration
     )
     
+    # New in v0.7.0: Echobeats cognitive cycle
+    from .echobeats import (
+        EchobeatsCycle,
+        CycleState,
+        BeatStep,
+        CognitiveStream,
+        BeatPhase,
+        NestedShell,
+        ReservoirEchoState,
+        TensorBundle,
+        generate_echobeats_training_data
+    )
+    
+    # New in v0.7.0: Reservoir-augmented corpus generation
+    from .reservoir_corpus_generator import (
+        ReservoirCorpusGenerator,
+        ReservoirCorpusExample
+    )
+    
     __all__ = [
         # Core components
         "TransformerLayer", 
@@ -200,7 +228,20 @@ try:
         "create_aar_contexts_from_monitoring",
         # Autonomous loop (v0.6.0)
         "AutonomousSelfImprovementLoop",
-        "LoopIteration"
+        "LoopIteration",
+        # Echobeats cognitive cycle (v0.7.0)
+        "EchobeatsCycle",
+        "CycleState",
+        "BeatStep",
+        "CognitiveStream",
+        "BeatPhase",
+        "NestedShell",
+        "ReservoirEchoState",
+        "TensorBundle",
+        "generate_echobeats_training_data",
+        # Reservoir corpus generation (v0.7.0)
+        "ReservoirCorpusGenerator",
+        "ReservoirCorpusExample",
     ]
 except ImportError:
     # Torch not available, only export base components

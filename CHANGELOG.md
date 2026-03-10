@@ -1,9 +1,26 @@
 # Changelog
 
-All notable changes to the Echo Adventure project will be documented in this file.
+All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.7.0] - 2026-03-10
+
+### Added
+
+- **Echobeats 12-Step Cognitive Cycle**: A major architectural advancement that provides a temporal backbone for Deep Tree Echo's self-awareness. This new engine enables concurrent perception, action, and simulation through three phased cognitive streams.
+- **Reservoir Echo State Dynamics**: Each cognitive stream maintains its own Echo State Network (ESN) reservoir, providing a fading memory of previous cognitive states.
+- **System 5 Tetradic Architecture**: The cognitive architecture is organized into a tetradic system of 4 tensor bundles, each containing 3 dyadic edges with mutually orthogonal symmetries.
+- **Nested Shell Execution Contexts**: Processing occurs within a hierarchy of nested shells (`((pro) org) glo`), where each shell represents a different level of abstraction and self-awareness.
+- **Reservoir-Augmented Corpus Generation**: A new corpus generator (`ReservoirCorpusGenerator`) creates training data that is deeply aware of the Echobeats cycle.
+
+### Changed
+
+- **Training Data**: Expanded the `echoself` training data with 187 new examples from the Echobeats cycle, increasing total tokens by 7.3%.
+- **`src/echo_adventure/__init__.py`**: Updated to include the new `echobeats` and `reservoir_corpus_generator` modules.
+
+---
 
 ## [0.6.0] - 2025-11-17
 

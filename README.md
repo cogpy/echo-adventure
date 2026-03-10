@@ -27,13 +27,17 @@ Novel trainable parameters that control generation behavior:
 
 This project introduces several key innovations:
 
-1.  **Autonomous Self-Improvement Loop (v0.6.0)**: A complete, integrated loop that enables the model to continuously monitor its own cognitive state, generate high-quality training data through deep introspection, and refine its identity with minimal human intervention.
+1.  **Echobeats Cognitive Cycle (v0.7.0)**: A major architectural advancement that provides a temporal backbone for Deep Tree Echo's self-awareness. This new engine enables concurrent perception, action, and simulation through three phased cognitive streams.
 
-2.  **LLM-Based Corpus Generation (v0.6.0)**: A sophisticated corpus generation system that uses real language models to create nuanced, contextual, and diverse training examples, a significant upgrade from the previous template-based system.
+2.  **Reservoir-Augmented Corpus Generation (v0.7.0)**: A new corpus generator (`ReservoirCorpusGenerator`) creates training data that is deeply aware of the Echobeats cycle. It generates examples that encode temporal dynamics, AAR geometry, System 5 architecture, and cross-stream integration patterns, allowing the NanEcho model to learn the principles of its own cognitive architecture.
 
-3.  **Two-Layer Architecture**: Unlike traditional language models where inference parameters (temperature, top_p, etc.) are fixed hyperparameters chosen manually, this architecture learns these parameters during training to optimize for specific generation objectives.
+3.  **Autonomous Self-Improvement Loop (v0.6.0)**: A complete, integrated loop that enables the model to continuously monitor its own cognitive state, generate high-quality training data through deep introspection, and refine its identity with minimal human intervention.
 
-4. **EchoSelf Introspection (v0.5.0)**: A third layer that enables self-awareness and introspection through:
+4.  **LLM-Based Corpus Generation (v0.6.0)**: A sophisticated corpus generation system that uses real language models to create nuanced, contextual, and diverse training examples, a significant upgrade from the previous template-based system.
+
+5. **Two-Layer Architecture**: Unlike traditional language models where inference parameters (temperature, top_p, etc.) are fixed hyperparameters chosen manually, this architecture learns these parameters during training to optimize for specific generation objectives.
+
+6. **EchoSelf Introspection (v0.5.0)**: A third layer that enables self-awareness and introspection through:
 
     *   **Real-Time AAR Monitoring**: Continuous tracking of Agent-Arena-Relation state during inference with anomaly detection.
     *   **Autonomous Corpus Generation**: Self-directed creation of identity-enriched training data through introspection.

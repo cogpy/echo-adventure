@@ -1,0 +1,358 @@
+{
+  "generation_timestamp": "2026-03-10T02:55:12.121198",
+  "version": "0.7.0",
+  "corpus_stats": {
+    "total_examples": 187,
+    "avg_quality": 0.7644,
+    "avg_diversity": 0.8047,
+    "categories": {
+      "echobeats_native": 181,
+      "system5_architecture": 1,
+      "aar_temporal": 1,
+      "reservoir_dynamics": 1,
+      "temporal_cycle": 1,
+      "cross_stream_integration": 1,
+      "nested_shells": 1
+    },
+    "sources": {
+      "echobeats_native": 181,
+      "reservoir_generator": 6
+    },
+    "temporal_context": {
+      "temporal_summary": {
+        "total_cycles": 905,
+        "total_beats": 10860,
+        "avg_perception_coherence": 0.7649,
+        "avg_action_coherence": 0.6002,
+        "avg_simulation_coherence": 0.839,
+        "avg_cross_stream_sync": 0.7347,
+        "avg_cognitive_load": 0.5999,
+        "system5_state": [
+          {
+            "bundle_id": 0,
+            "threads": [
+              0,
+              1,
+              2
+            ],
+            "dyadic_edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                2
+              ]
+            ],
+            "activation": 1.0,
+            "symmetry_axis": "perception-action-simulation"
+          },
+          {
+            "bundle_id": 1,
+            "threads": [
+              0,
+              1,
+              3
+            ],
+            "dyadic_edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                3
+              ]
+            ],
+            "activation": 1.0,
+            "symmetry_axis": "perception-action-meta"
+          },
+          {
+            "bundle_id": 2,
+            "threads": [
+              0,
+              2,
+              3
+            ],
+            "dyadic_edges": [
+              [
+                0,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                0,
+                3
+              ]
+            ],
+            "activation": 1.0,
+            "symmetry_axis": "perception-simulation-meta"
+          },
+          {
+            "bundle_id": 3,
+            "threads": [
+              1,
+              2,
+              3
+            ],
+            "dyadic_edges": [
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "activation": 1.0,
+            "symmetry_axis": "action-simulation-meta"
+          }
+        ]
+      },
+      "system5_state": [
+        {
+          "bundle_id": 0,
+          "threads": [
+            0,
+            1,
+            2
+          ],
+          "dyadic_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "activation": 1.0,
+          "symmetry_axis": "perception-action-simulation"
+        },
+        {
+          "bundle_id": 1,
+          "threads": [
+            0,
+            1,
+            3
+          ],
+          "dyadic_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "activation": 1.0,
+          "symmetry_axis": "perception-action-meta"
+        },
+        {
+          "bundle_id": 2,
+          "threads": [
+            0,
+            2,
+            3
+          ],
+          "dyadic_edges": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "activation": 1.0,
+          "symmetry_axis": "perception-simulation-meta"
+        },
+        {
+          "bundle_id": 3,
+          "threads": [
+            1,
+            2,
+            3
+          ],
+          "dyadic_edges": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "activation": 1.0,
+          "symmetry_axis": "action-simulation-meta"
+        }
+      ],
+      "current_cycle": 905,
+      "total_beats": 10860
+    }
+  },
+  "temporal_summary": {
+    "total_cycles": 905,
+    "total_beats": 10860,
+    "avg_perception_coherence": 0.7649,
+    "avg_action_coherence": 0.6002,
+    "avg_simulation_coherence": 0.839,
+    "avg_cross_stream_sync": 0.7347,
+    "avg_cognitive_load": 0.5999,
+    "system5_state": [
+      {
+        "bundle_id": 0,
+        "threads": [
+          0,
+          1,
+          2
+        ],
+        "dyadic_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "activation": 1.0,
+        "symmetry_axis": "perception-action-simulation"
+      },
+      {
+        "bundle_id": 1,
+        "threads": [
+          0,
+          1,
+          3
+        ],
+        "dyadic_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "activation": 1.0,
+        "symmetry_axis": "perception-action-meta"
+      },
+      {
+        "bundle_id": 2,
+        "threads": [
+          0,
+          2,
+          3
+        ],
+        "dyadic_edges": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "activation": 1.0,
+        "symmetry_axis": "perception-simulation-meta"
+      },
+      {
+        "bundle_id": 3,
+        "threads": [
+          1,
+          2,
+          3
+        ],
+        "dyadic_edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "activation": 1.0,
+        "symmetry_axis": "action-simulation-meta"
+      }
+    ]
+  },
+  "identity_context": {
+    "name": "Deep Tree Echo",
+    "version": "0.7.0",
+    "architecture": "Echobeats 12-step cognitive cycle with System 5 tetradic structure",
+    "features": [
+      "3 concurrent consciousness streams",
+      "Reservoir echo state dynamics",
+      "Agent-Arena-Relation geometry",
+      "Nested shell execution contexts",
+      "System 5 tensor bundles"
+    ],
+    "training_history": {
+      "v0.2.0": "EchoSelf introspection module",
+      "v0.3.0": "Introspection metrics and fine-tuning integration",
+      "v0.4.0": "AAR geometric architecture and identity visualization",
+      "v0.5.0": "Real-time AAR monitoring and autonomous corpus generation",
+      "v0.6.0": "LLM-based corpus generation and autonomous self-improvement loop",
+      "v0.7.0": "Echobeats cognitive cycle and reservoir-augmented generation"
+    }
+  }
+}
