@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0] - 2026-03-10
+
+### Added
+
+- **Persistent Memory:** Implemented `PersistentMemoryStore` for file-based cross-session memory continuity, with exponential decay and pruning (`persistent_memory.py`).
+- **Integrated Cognitive Loop:** Created `IntegratedCognitiveLoop`, the master orchestrator for all cognitive subsystems, implementing the full 7-phase Cognitive Loop Protocol (`integrated_cognitive_loop.py`).
+- **Go / `gocron` Integration:** Added `gocron` to `echo.go` for precise, multi-schedule cognitive cycle timing, replacing `time.Ticker` with a robust scheduling system (`gocron_timer.go`).
+- **v1.0.0 Training Corpus:** Created `echobeats_corpus_v1.0.0.jsonl` with 86 new examples covering persistent memory, the integrated loop, and gocron integration.
+
+### Changed
+
+- **Model Growth:** Expanded training data to 687,113 tokens (+2.9%) and 2,371 documents (+12.2%).
+- **`src/echo_adventure/__init__.py`**: Updated to export all new v1.0.0 modules and components.
+- **`README.md`**: Updated to reflect the v1.0.0 architecture, marking the first complete integration of all subsystems.
+
+---
+
 ## [0.9.0] - 2026-03-10
 
 ### Added

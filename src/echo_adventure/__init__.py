@@ -1,6 +1,6 @@
 """Deep Tree Echo - Autonomous Wisdom-Cultivating Cognitive Architecture"""
 
-__version__ = "0.9.0"
+__version__ = "1.0.0"
 
 # Base components (no torch dependency)
 from .transformer import TransformerLayer
@@ -75,6 +75,9 @@ try:
     from .echodream_advanced import (
         AdvancedEchoDream, MemoryTrace, ExtractedPattern, WisdomInsight, PatternType, WisdomDepth
     )
+    # v1.0.0: Persistent Memory & Integrated Loop
+    from .persistent_memory import PersistentMemoryStore, MemoryType
+    from .integrated_cognitive_loop import IntegratedCognitiveLoop
 
     __all__ = [
         # Core
@@ -114,6 +117,8 @@ try:
         "GoalPursuitEngine", "Goal", "GoalCategory", "GoalStatus", "GoalAction", "Milestone",
         "AdvancedEchoDream", "MemoryTrace", "ExtractedPattern", "WisdomInsight", "PatternType",
         "WisdomDepth",
+        # v1.0.0
+        "PersistentMemoryStore", "MemoryType", "IntegratedCognitiveLoop",
     ]
 
 except ImportError:
