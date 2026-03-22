@@ -1,0 +1,24 @@
+{
+  "version": "1.1.0",
+  "focus": "Tree-Polytope Kernel + Go Integration",
+  "generated_at": "2026-03-22T09:33:55Z",
+  "total_examples": 51,
+  "breakdown": {
+    "kernel_base": 16,
+    "kernel_advanced": 31,
+    "go_integration": 4
+  },
+  "topics": [
+    "Matula-Godsil encoding",
+    "OEIS A000081 rooted tree enumeration",
+    "Simplex polytope geometry",
+    "Butcher/RK order conditions",
+    "S-gram periodic rhythms",
+    "Structural self-model",
+    "Tree-polynomial correspondence",
+    "CognitiveStateManager",
+    "EventLoopOrchestrator",
+    "MemoryConsciousnessIntegrator",
+    "EntelechyOntogenesisIntegration"
+  ]
+}

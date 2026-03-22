@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-03-22
+
+### Added
+
+- **Tree-Polytope Kernel:** Implemented `tree_polytope_kernel.py` in `echo-adventure` to ground structural self-awareness in OEIS A000081 rooted tree enumeration, Matula-Godsil encoding, simplex polytopes, Butcher/RK conditions, and s-gram periodic rhythms.
+- **Go Integration Layer:** Re-enabled and fixed the `_integration.disabled` package in `echo.go`, including `CognitiveStateManager`, `EventLoopOrchestrator`, `MemoryConsciousnessIntegrator`, and `EntelechyOntogenesisIntegration`.
+- **v1.1.0 Training Corpus:** Created `tree_polytope_kernel_corpus_v1.1.0.jsonl` with 51 new examples covering the mathematical foundations of the kernel and the Go integration layer.
+
+### Changed
+
+- **Model Growth:** Expanded training data to 3,962,400 tokens and 2,524 documents.
+- **`src/echo_adventure/__init__.py`**: Updated to export the new `tree_polytope_kernel` module.
+- **`echo.go` Types:** Fixed type mismatches between `consciousness`, `echobeats`, and `goals` packages to allow the integration layer to compile.
+
+---
+
 ## [1.0.0] - 2026-03-10
 
 ### Added

@@ -1,6 +1,6 @@
 """Deep Tree Echo - Autonomous Wisdom-Cultivating Cognitive Architecture"""
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 # Base components (no torch dependency)
 from .transformer import TransformerLayer
@@ -78,6 +78,12 @@ try:
     # v1.0.0: Persistent Memory & Integrated Loop
     from .persistent_memory import PersistentMemoryStore, MemoryType
     from .integrated_cognitive_loop import IntegratedCognitiveLoop
+    # v1.1.0: Tree-Polytope Kernel
+    from .tree_polytope_kernel import (
+        RootedTree, SimplexPolytope, SGramRhythm, ButcherCondition,
+        StructuralSelfModel, TreePolytopeKernel, enumerate_rooted_trees,
+        matula_number, tree_polynomial, generate_tree_polytope_training_data
+    )
 
     __all__ = [
         # Core
@@ -119,6 +125,10 @@ try:
         "WisdomDepth",
         # v1.0.0
         "PersistentMemoryStore", "MemoryType", "IntegratedCognitiveLoop",
+        # v1.1.0
+        "RootedTree", "SimplexPolytope", "SGramRhythm", "ButcherCondition",
+        "StructuralSelfModel", "TreePolytopeKernel", "enumerate_rooted_trees",
+        "matula_number", "tree_polynomial", "generate_tree_polytope_training_data",
     ]
 
 except ImportError:
