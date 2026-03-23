@@ -1,6 +1,6 @@
 """Deep Tree Echo - Autonomous Wisdom-Cultivating Cognitive Architecture"""
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 
 # Base components (no torch dependency)
 from .transformer import TransformerLayer
@@ -84,6 +84,17 @@ try:
         StructuralSelfModel, TreePolytopeKernel, enumerate_rooted_trees,
         matula_number, tree_polynomial, generate_tree_polytope_training_data
     )
+    # v1.2.0: Live2D Expression Pipeline & llama-cpp-skillm Bridge
+    from .live2d_expression import (
+        VirtualEndocrineEngine, DTEchoExpressionPipeline, EndocrineState,
+        Sensitivity, FACSState, CubismParams, endocrine_to_facs, facs_to_cubism,
+        generate_live2d_expression_training_data
+    )
+    from .llama_cpp_skillm_bridge import (
+        SkillmVerb, InferencePipeline, InferencePipelineStep,
+        create_inference_loop_pipeline, create_dte_core_self_pipeline,
+        generate_skillm_bridge_training_data
+    )
 
     __all__ = [
         # Core
@@ -129,6 +140,13 @@ try:
         "RootedTree", "SimplexPolytope", "SGramRhythm", "ButcherCondition",
         "StructuralSelfModel", "TreePolytopeKernel", "enumerate_rooted_trees",
         "matula_number", "tree_polynomial", "generate_tree_polytope_training_data",
+        # v1.2.0
+        "VirtualEndocrineEngine", "DTEchoExpressionPipeline", "EndocrineState",
+        "Sensitivity", "FACSState", "CubismParams", "endocrine_to_facs", "facs_to_cubism",
+        "generate_live2d_expression_training_data",
+        "SkillmVerb", "InferencePipeline", "InferencePipelineStep",
+        "create_inference_loop_pipeline", "create_dte_core_self_pipeline",
+        "generate_skillm_bridge_training_data",
     ]
 
 except ImportError:

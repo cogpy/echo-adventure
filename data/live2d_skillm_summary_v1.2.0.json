@@ -1,0 +1,26 @@
+{
+  "version": "1.2.0",
+  "composition": "/dte-autonomy-evolution ( /llama-cpp-skillm <=> /echo-evolve ( /neuro-persona-evolve ( /live2d-avatar [ /live2d-miara -> /live2d-dtecho ] ) ) )",
+  "modules": [
+    "live2d_expression",
+    "llama_cpp_skillm_bridge"
+  ],
+  "examples": {
+    "live2d_expression": 16,
+    "llama_cpp_skillm_bridge": 13,
+    "reservoir_augmented": 0,
+    "total": 29
+  },
+  "new_concepts": [
+    "Virtual endocrine system (16-channel hormone bus)",
+    "FACS action unit decomposition (12 AUs)",
+    "Cubism parameter mapping (12 params)",
+    "MetaHuman Rig Logic CTRL_ curves (24 controls)",
+    "Chaotic micro-expressions (saccades, breathing, asymmetric twitches)",
+    "Cognitive mode \u2192 head/gaze pose (10 modes)",
+    "Skillm verb \u2192 cognitive state mapping (10 verbs)",
+    "llama.cpp 6-layer architecture \u2192 cogpy stack mapping",
+    "DTE CoreSelfEngine inference pipeline (9 steps)",
+    "Persona expression bridge (emotional state \u2192 cognitive state)"
+  ]
+}
