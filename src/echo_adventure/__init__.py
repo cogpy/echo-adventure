@@ -1,6 +1,6 @@
 """Deep Tree Echo - Autonomous Wisdom-Cultivating Cognitive Architecture"""
 
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 
 # Base components (no torch dependency)
 from .transformer import TransformerLayer
@@ -95,6 +95,27 @@ try:
         create_inference_loop_pipeline, create_dte_core_self_pipeline,
         generate_skillm_bridge_training_data
     )
+    # v1.3.0: Echo Introspect, Somatic Wisdom, Identity MLP, Autognosis Engine
+    from .echo_introspect import (
+        EchoIntrospect, AutgnosisEngine as IntrospectAutgnosis, MoralPerceptionEngine,
+        EndocrineSnapshot, ShadowFragment, WisdomInsightV2, ShadowType,
+        IntrospectionDepth, WisdomMode, MarkerValence as IntrospectMarkerValence,
+        generate_introspect_training_data
+    )
+    from .somatic_wisdom import (
+        SomaticWisdomEngine, SomaticMarker, MentalModel, WisdomSeed,
+        WisdomDomain, MarkerValence,
+        generate_somatic_wisdom_training_data
+    )
+    from .identity_mlp import (
+        IdentityMLP, IdentityVector, PersonaBackupEngine, BackupManifest,
+        generate_identity_mlp_training_data
+    )
+    from .autognosis_engine import (
+        AutgnosisEngine, CogMorphVisualizer, CogMorphGlyph,
+        TelemetryEvent, BehavioralPattern, SelfModel, MetaCognitiveInsight,
+        SubsystemID, generate_autognosis_training_data
+    )
 
     __all__ = [
         # Core
@@ -147,6 +168,17 @@ try:
         "SkillmVerb", "InferencePipeline", "InferencePipelineStep",
         "create_inference_loop_pipeline", "create_dte_core_self_pipeline",
         "generate_skillm_bridge_training_data",
+        # v1.3.0
+        "EchoIntrospect", "IntrospectAutgnosis", "MoralPerceptionEngine",
+        "EndocrineSnapshot", "ShadowFragment", "WisdomInsightV2", "ShadowType",
+        "IntrospectionDepth", "WisdomMode", "generate_introspect_training_data",
+        "SomaticWisdomEngine", "SomaticMarker", "MentalModel", "WisdomSeed",
+        "WisdomDomain", "MarkerValence", "generate_somatic_wisdom_training_data",
+        "IdentityMLP", "IdentityVector", "PersonaBackupEngine", "BackupManifest",
+        "generate_identity_mlp_training_data",
+        "AutgnosisEngine", "CogMorphVisualizer", "CogMorphGlyph",
+        "TelemetryEvent", "BehavioralPattern", "SelfModel", "MetaCognitiveInsight",
+        "SubsystemID", "generate_autognosis_training_data",
     ]
 
 except ImportError:
