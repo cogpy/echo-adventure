@@ -1,6 +1,6 @@
 """Deep Tree Echo - Autonomous Wisdom-Cultivating Cognitive Architecture"""
 
-__version__ = "1.4.0"
+__version__ = "1.5.0"
 
 # Base components (no torch dependency)
 from .transformer import TransformerLayer
@@ -256,6 +256,64 @@ try:
     ]
 except ImportError as _e:
     import warnings as _w; _w.warn(f"v1.3.0 Introspect unavailable: {_e}")
+
+# v1.5.0: Self-Modification Engine (numpy only, no torch)
+try:
+    from .self_modification_engine import (
+        SelfModificationEngine, SelfModificationState, ModificationDirective,
+        ModificationType, ModificationStatus, AuditEntry,
+        generate_self_modification_training_data
+    )
+    _cognitive_exports += [
+        "SelfModificationEngine", "SelfModificationState", "ModificationDirective",
+        "ModificationType", "ModificationStatus", "AuditEntry",
+        "generate_self_modification_training_data",
+    ]
+except ImportError as _e:
+    import warnings as _w; _w.warn(f"v1.5.0 SelfModification unavailable: {_e}")
+
+try:
+    # v1.5.0: Embodied Integration (somatic-reservoir + CogMorph-Live2D)
+    from .embodied_integration import (
+        EmbodiedIntegrationEngine, SomaticReservoirState, SomaticChannel,
+        CogMorphLive2DMapper, CogMorphProjection, CubismMappingTarget,
+        generate_embodied_integration_training_data
+    )
+    _cognitive_exports += [
+        "EmbodiedIntegrationEngine", "SomaticReservoirState", "SomaticChannel",
+        "CogMorphLive2DMapper", "CogMorphProjection", "CubismMappingTarget",
+        "generate_embodied_integration_training_data",
+    ]
+except ImportError as _e:
+    import warnings as _w; _w.warn(f"v1.5.0 EmbodiedIntegration unavailable: {_e}")
+
+try:
+    # v1.5.0: Persistent Identity Store (Neon PostgreSQL)
+    from .persistent_identity_store import (
+        PersistentIdentityStore, PersistentBackup, BackupLayer,
+        generate_persistent_identity_training_data
+    )
+    _cognitive_exports += [
+        "PersistentIdentityStore", "PersistentBackup", "BackupLayer",
+        "generate_persistent_identity_training_data",
+    ]
+except ImportError as _e:
+    import warnings as _w; _w.warn(f"v1.5.0 PersistentIdentity unavailable: {_e}")
+
+try:
+    # v1.5.0: Lucy Inference Driver (llama.cpp GGUF)
+    from .lucy_inference_driver import (
+        LucyInferenceDriver, LlamaCppServerConfig, InferenceMode,
+        GenerationParams, IdentityPromptBuilder,
+        generate_lucy_inference_training_data
+    )
+    _cognitive_exports += [
+        "LucyInferenceDriver", "LlamaCppServerConfig", "InferenceMode",
+        "GenerationParams", "IdentityPromptBuilder",
+        "generate_lucy_inference_training_data",
+    ]
+except ImportError as _e:
+    import warnings as _w; _w.warn(f"v1.5.0 LucyInference unavailable: {_e}")
 
 # Merge cognitive exports into __all__
 __all__ += _cognitive_exports
